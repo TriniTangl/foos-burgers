@@ -11,13 +11,16 @@ html,
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
+    line-height: 1.25;
     height: 100%;
     color: $secondary-color;
 }
 
-.link {
-    font-size: 14px;
-    display: block;
+a {
+    font-size: inherit;
+    cursor: pointer;
+    text-align: center;
+
     text-decoration: none;
     color: $primary-dark-color;
 
@@ -26,13 +29,13 @@ body {
     }
 }
 
-.btn {
+button {
     font-weight: bold;
-    line-height: 36px;
     display: block;
-    padding: 0 25px;
+    padding: 12px 25px;
     cursor: pointer;
     text-align: center;
+    text-decoration: none;
     text-transform: uppercase;
     color: $primary-light-color;
     border: none;
@@ -43,18 +46,188 @@ body {
     }
 }
 
-.error-login {
+.tab-group {
+    width: 100%;
+
+    .tab-switch {
+        display: flex;
+
+        a {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 1;
+            flex-grow: 1;
+            padding: 12px 5px;
+            text-decoration: none;
+            text-transform: capitalize;
+            color: $secondary-color;
+            background-color: $secondary-light-color;
+
+            &:hover {
+                background-color: $light-dark-color;
+            }
+
+            &.active {
+                background-color: $light-color;
+            }
+        }
+    }
+
+    .tab-content {
+        display: none;
+        padding: 20px;
+
+        &.active {
+            display: block;
+        }
+
+    }
+}
+
+.category-group {
+    $category-switch-width: 150px;
+
+    display: flex;
+    justify-content: space-between;
+
+    .category-switch {
+        display: flex;
+        flex-direction: column;
+        min-width: $category-switch-width;
+
+        a {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1;
+            width: 100%;
+            margin: 2px 0;
+            padding: 7px 5px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $secondary-color;
+            background-color: $secondary-light-color;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:hover {
+                background-color: $light-dark-color;
+            }
+
+            &.active {
+                color: $light-color;
+                background-color: $secondary-dark-color;
+            }
+        }
+    }
+
+    .category-card {
+        display: none;
+        width: 100%;
+        margin-left: 10px;
+
+        &.active {
+            display: block;
+        }
+
+        .category-card-header {
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 1;
+            width: 100%;
+            height: 140px;
+            padding: 95px 15px 15px 15px;
+            text-align: left;
+            text-transform: uppercase;
+            color: $light-color;
+            background: $category-header-bg 0 25% / 130% auto no-repeat;
+        }
+
+        .category-card-body {
+            display: flex;
+            flex-direction: column;
+            min-width: 100%;
+        }
+    }
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    padding: 20px 15px;
+
+    .photo {
+        position: relative;
+        overflow: hidden;
+        width: 50%;
+        height: 100%;
+        text-align: center;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 100%;
+            transform: translateY(-50%) translateX(-50%);
+        }
+    }
+
+    .description {
+        font-size: inherit;
+        width: 50%;
+        padding: 0 15px;
+
+        .card-header {
+            font-weight: bold;
+            color: $primary-dark-color;
+        }
+
+        .card-body {
+            padding: 5px 0;
+        }
+
+        .card-footer {
+            padding-top: 10px;
+            color: $primary-color;
+        }
+    }
+
+
+}
+
+.form-group {
+
+    .title {
+        font-weight: bold;
+    }
+
+    label {
+        display: block;
+        width: max-content;
+        padding-top: 5px;
+        cursor: pointer;
+    }
+}
+
+.warning-block {
+    font-size: inherit;
     font-weight: bold;
     display: block;
-    text-align: center;
 
-    .link {
-        font-size: inherit;
+    a {
         display: inline-block;
     }
 }
 
 .wrapper {
+    $page-margin: 10%;
+    
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -67,21 +240,19 @@ body {
         height: 150px;
         background: $primary-color;
 
-        .header-container {
+        .header-content {
             display: flex;
             align-items: center;
             justify-content: space-between;
             height: 100%;
-            margin: 0 10%;
+            margin: 0 $page-margin;
             padding: 0 25px;
 
             nav {
                 display: flex;
 
                 a {
-                    display: block;
                     padding: 10px 20px;
-                    text-align: center;
                     text-decoration: none;
                     text-transform: uppercase;
                     color: $light-color;
@@ -101,37 +272,29 @@ body {
         margin: 0 10%;
         background: $light-color;
 
-        .menu {
+        .main-content {
             width: 70%;
             padding: 30px 25px;
 
-            .details {
-                h2 {
-                    font-size: 22px;
-                    line-height: 24px;
-                    text-transform: uppercase;
-                }
+            h2 {
+                font-size: 22px;
+                text-transform: uppercase;
+            }
 
-                .link {
-                    text-decoration: underline;
-                }
+            table {
+                font-size: 13px;
+                min-width: 500px;
+                margin-top: 20px;
+                table-layout: fixed;
+                text-align: left;
 
-                table {
-                    font-size: 13px;
-                    min-width: 500px;
-                    margin-top: 20px;
-                    table-layout: fixed;
-                    text-align: left;
-
-                    th {
-                        font-weight: normal;
-                    }
+                th {
+                    font-weight: normal;
                 }
             }
 
-            .optional-message {
+            .warning-block {
                 font-size: 14px;
-                font-weight: bold;
                 margin-top: 15px;
                 padding: 10px 0;
                 border-top: $primary-dark-border;
@@ -139,243 +302,111 @@ body {
             }
 
             .category-group {
-                display: flex;
-                justify-content: space-between;
                 margin-top: 20px;
 
-                .category-switch {
-                    width: 150px;
+                .card {
 
-                    a {
-                        font-size: 14px;
-                        line-height: 30px;
-                        width: 150px;
-                        margin: 2px 0;
-                        text-decoration: none;
-                        color: $secondary-color;
-                        background-color: $secondary-light-color;
-
-                        &:first-child {
-                            margin-top: 0;
-                        }
-
-                        &:last-child {
-                            margin-bottom: 0;
-                        }
-
-                        &:hover {
-                            background-color: $light-dark-color;
-                        }
-
-                        &.active {
-                            color: $light-color;
-                            background-color: $secondary-dark-color;
-                        }
-                    }
-                }
-
-                .category-menu {
-                    display: none;
-                    width: calc(100% - (150px + 10px));
-
-                    &.active {
-                        display: block;
+                    .card-body {
+                        font-size: 12px;
+                        line-height: 1.4;
                     }
 
-                    h2 {
-                        font-size: 30px;
-                        font-weight: bold;
-                        line-height: 30px;
-                        width: 100%;
-                        height: 140px;
-                        padding: 95px 15px 15px 15px;
-                        text-align: left;
-                        text-transform: uppercase;
-                        color: $light-color;
-                        background-image: $foos-chicken-img;
-                        background-repeat: no-repeat;
-                        background-position: 0 25%;
-                        background-size: 130% auto;
-                    }
-
-                    .category-item {
+                    .card-footer {
                         display: flex;
                         justify-content: space-between;
-                        height: 200px;
-                        padding: 20px 15px;
-
-                        .photo {
-                            position: relative;
-                            overflow: hidden;
-                            width: 50%;
-                            height: 100%;
-                            text-align: center;
-
-                            img {
-                                position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                height: 100%;
-                                transform: translateY(-50%) translateX(-50%);
-                            }
-                        }
-
-                        .description {
-                            width: 50%;
-                            padding: 0 15px;
-
-                            h4 {
-                                font-size: 14px;
-                                font-weight: bold;
-                                color: $primary-dark-color;
-                            }
-
-                            .composition {
-                                font-size: 12px;
-                                line-height: 16px;
-                                padding: 5px 0;
-                            }
-
-                            .info {
-                                font-weight: 400;
-                                padding-top: 10px;
-                                color: $primary-color;
-
-                                .calories {
-                                    float: right;
-                                }
-                            }
-                        }
                     }
                 }
-
             }
         }
 
-        .orders {
+        .sidebar {
             width: 30%;
             padding-bottom: 25px;
             border-left: $secondary-light-border;
 
             .tab-group {
-                width: 100%;
 
-                .tab-link {
-                    font-size: 16px;
-                    font-weight: bold;
-                    line-height: 34px;
-                    float: left;
-                    width: 50%;
-                    padding: 0 15px;
-                    cursor: pointer;
+                .warning-block {
+                    padding: 10px;
                     text-align: center;
-                    text-decoration: none;
-                    text-transform: capitalize;
-                    color: $secondary-color;
-                    border: none;
-                    background-color: $secondary-light-color;
-
-                    &:hover {
-                        background-color: $light-dark-color;
-                    }
-
-                    &.active {
-                        background-color: $light-color;
-                    }
                 }
 
-                .tab-content {
-                    display: none;
-                    height: 100%;
-                    padding: calc(20px + 34px) 20px 20px;
+                h2 {
+                    text-transform: capitalize;
+                }
 
-                    &.active {
-                        display: block;
-                    }
+                table {
+                    width: 100%;
+                    margin: 15px 0 30px;
+                    table-layout: fixed;
+                    border-collapse: collapse;
+                    border-top: $primary-dark-border;
 
-                    .favourites {
-                        padding: 10px;
-                    }
-
-                    h2 {
-                        text-transform: capitalize;
-                    }
-
-                    .orders-list {
-                        width: 100%;
-                        margin: 15px 0 30px;
-                        table-layout: fixed;
-                        border-collapse: collapse;
-                        border-top: $primary-dark-border;
-
-                        tr {
-                            &:not(.order-item) {
-                                .description {
-                                    font-weight: bold;
-                                    text-transform: uppercase;
-                                    color: $primary-dark-color;
-                                }
-                            }
-
-                            &.order-item {
-                                td {
-                                    border-bottom: $primary-dark-border;
-                                }
-                            }
-
-                            td {
-                                padding: 8px 0;
-
-                                &.description {
-                                    width: 70%;
-
-                                    .name {
-                                        text-transform: capitalize;
-                                    }
-                                }
-
-                                &.price {
-                                    font-weight: bold;
-                                    width: 30%;
-                                    text-align: right;
-                                    vertical-align: top;
-                                    color: $primary-dark-color;
-                                }
-                            }
+                    tr {
+                        &:not(.bordered-row) > .left-item {
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            color: $primary-dark-color;
                         }
 
-                        .edit-buttons {
-                            font-size: 14px;
-                            font-weight: bold;
+                        &.bordered-row > td {
+                            border-bottom: $primary-dark-border;
+                        }
 
-                            a {
-                                text-decoration: none;
+                        td {
+                            padding: 8px 0;
+
+                            &.left-item {
+                                width: 70%;
+
+                                .title {
+                                    text-transform: capitalize;
+                                }
+                            }
+
+                            &.right-item {
+                                font-weight: bold;
+                                width: 30%;
+                                text-align: right;
+                                vertical-align: top;
                                 color: $primary-dark-color;
                             }
                         }
                     }
 
-                    .order-options {
-                        .form-group {
-                            padding-top: 15px;
+                    .edit-buttons {
+                        display: flex;
+                        justify-content: start;
+                        margin-top: 3px;
 
-                            .title {
-                                font-weight: bold;
-                            }
+                        button {
+                            font-size: 14px;
+                            font-weight: bold;
+                            line-height: 1;
+                            margin-right: 2px;
+                            padding: 2px 3px;
+                            text-transform: lowercase;
+                            color: $primary-dark-color;
+                            border: $secondary-light-border;
+                            background-color: $light-color;
 
-                            label {
-                                display: block;
-                                width: max-content;
-                                padding-top: 5px;
-                                cursor: pointer;
-
+                            &:hover {
+                                background-color: $primary-light-color;
                             }
                         }
+                    }
 
-                        .btn {
-                            width: 100%;
-                            margin-top: 30px;
-                        }
+                }
+
+                form {
+
+                    .form-group {
+                        padding-top: 15px;
+                    }
+
+                    button {
+                        width: 100%;
+                        margin-top: 30px;
                     }
                 }
             }
@@ -389,32 +420,26 @@ body {
         height: 20px;
         background: $primary-dark-color;
 
-        .footer-container {
+        .footer-content {
+            font-size: 11px;
             position: absolute;
-            right: 10%;
+            right: $page-margin;
             bottom: 25px;
-            left: 10%;
+            left: $page-margin;
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 0 5px;
 
             address {
-                font-size: 10px;
                 font-style: normal;
                 color: $primary-color;
-
-                .link {
-                    font-size: 10px;
-                    display: inline-block;
-                }
             }
 
             nav {
                 display: flex;
 
-                .link {
-                    font-size: 10px;
+                a {
                     padding: 0 5px;
                     text-transform: capitalize;
                     border-right: $primary-dark-border;
@@ -425,7 +450,5 @@ body {
                 }
             }
         }
-
-
     }
 }
