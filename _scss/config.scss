@@ -1,25 +1,21 @@
-// Fonts imports and variables
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Mukta:400,500,600,700&display=swap&subset=latin-ext');
-
-$open-sans-font: 'Open Sans', sans-serif;
-$mukta-font: 'Mukta', sans-serif;
-
 // Image variable
-$foos-chicken: url('../img/foods/foos_chicken.jpg');
-$fooya-burger: url('../img/foods/fooya_burger.jpg');
+$foos-chicken-img: url('../img/foods/foos_chicken.jpg');
+$fooya-burger-img: url('../img/foods/fooya_burger.jpg');
 
 // Colors variables
-$primary: #ca500d;
-$primary-dark: #b84026;
-$primary-light: #f7edeb;
-$secondary: #424243;
-$secondary-dark: #2e2d32;
-$secondary-light: #e5e4e3;
-$light: #ffffff;
-$light-dark: #f2f1f0;
+$primary-color: #ca500d;
+$primary-dark-color: #b84026;
+$primary-light-color: #f7edeb;
+$secondary-color: #424243;
+$secondary-dark-color: #2e2d32;
+$secondary-light-color: #e5e4e3;
+$light-color: #ffffff;
+$light-dark-color: #f2f1f0;
 
 
 // Borders variables
-$primary-dark-border: 1px solid $primary-dark;
-$secondary-light-border: 1px solid $secondary-light;
+$primary-dark-border: 1px solid $primary-dark-color;
+$secondary-light-border: 1px solid $secondary-light-color;
+
+// Spaces variables
+
