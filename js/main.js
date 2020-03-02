@@ -23,8 +23,8 @@ window.onload = () => {
         button.addEventListener('click', evt => closeModalWindow(evt))
     });
 
-    document.getElementById('open-custom-modal').addEventListener('click', evt => {
-        document.querySelector('.modal.custom-modal').parentElement.classList.add('active');
+    document.getElementById('open-big-modal').addEventListener('click', evt => {
+        document.querySelector('.modal.big-modal').parentElement.classList.add('active');
     });
 
     document.getElementById('open-small-modal').addEventListener('click', evt => {
