@@ -303,6 +303,47 @@ input:not([type="checkbox"]):not([type="radio"]) {
     }
 }
 
+.two-column-list {
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+
+        &.bordered {
+            border-bottom: $primary-dark-border;
+        }
+    }
+}
+
+.mini-card {
+
+    .title {
+        text-transform: capitalize;
+    }
+
+    .edit-buttons {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 3px;
+
+        button {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1;
+            margin-right: 2px;
+            padding: 2px 3px;
+            text-transform: lowercase;
+            color: $primary-dark-color;
+            border: $secondary-light-border;
+            background-color: $light-color;
+
+            &:hover {
+                background-color: $primary-light-color;
+            }
+        }
+    }
+}
+
 .warning-block {
     font-size: inherit;
     font-weight: bold;
@@ -505,64 +546,20 @@ input:not([type="checkbox"]):not([type="radio"]) {
                     text-transform: capitalize;
                 }
 
-                table {
-                    width: 100%;
+                .two-column-list {
                     margin: 15px 0 30px;
-                    table-layout: fixed;
-                    border-collapse: collapse;
                     border-top: $primary-dark-border;
 
-                    tr {
-                        &:not(.bordered-row) > .left-item {
+                    .row {
+
+                        & > *:not(.mini-card) {
                             font-weight: bold;
                             text-transform: uppercase;
                             color: $primary-dark-color;
                         }
 
-                        &.bordered-row > td {
-                            border-bottom: $primary-dark-border;
-                        }
-
-                        td {
+                        & > * {
                             padding: 8px 0;
-
-                            &.left-item {
-                                width: 70%;
-
-                                .title {
-                                    text-transform: capitalize;
-                                }
-                            }
-
-                            &.right-item {
-                                font-weight: bold;
-                                width: 30%;
-                                text-align: right;
-                                vertical-align: top;
-                                color: $primary-dark-color;
-                            }
-                        }
-                    }
-
-                    .edit-buttons {
-                        display: flex;
-                        justify-content: flex-start;
-                        margin-top: 3px;
-
-                        button {
-                            font-size: 14px;
-                            font-weight: bold;
-                            line-height: 1;
-                            margin-right: 2px;
-                            padding: 2px 3px;
-                            text-transform: lowercase;
-                            color: $primary-dark-color;
-                            border: $secondary-light-border;
-                            background-color: $light-color;
-
-                            &:hover {
-                                background-color: $primary-light-color;
-                            }
                         }
                     }
                 }
