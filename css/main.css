@@ -133,19 +133,19 @@ input:not([type=checkbox]):not([type=radio]) {
 .category-group .category-content.active {
   display: block;
 }
-.category-group .category-content .category-content-header {
+.category-group .category-content .category-header {
   font-size: 30px;
   font-weight: bold;
   line-height: 1;
   width: 100%;
   height: 140px;
-  padding: 95px 15px 15px 15px;
+  padding: 95px 15px 15px;
   text-align: left;
   text-transform: uppercase;
   color: #ffffff;
   background: url("../img/foods/foos_chicken.jpg") 0 25%/130% auto no-repeat;
 }
-.category-group .category-content .category-content-body {
+.category-group .category-content .category-body {
   display: flex;
   flex-direction: column;
   min-width: 100%;
@@ -157,33 +157,33 @@ input:not([type=checkbox]):not([type=radio]) {
   height: 200px;
   padding: 20px 15px;
 }
-.card .photo {
+.card .card-photo {
   position: relative;
   overflow: hidden;
   width: 50%;
   height: 100%;
   text-align: center;
 }
-.card .photo img {
+.card .card-photo img {
   position: absolute;
   top: 50%;
   left: 50%;
   height: 100%;
   transform: translateY(-50%) translateX(-50%);
 }
-.card .description {
+.card .card-container {
   font-size: inherit;
   width: 50%;
   padding: 0 15px;
 }
-.card .description .card-header {
+.card .card-container .card-header {
   font-weight: bold;
   color: #b84026;
 }
-.card .description .card-body {
+.card .card-container .card-body {
   padding: 5px 0;
 }
-.card .description .card-footer {
+.card .card-container .card-footer {
   padding-top: 10px;
   color: #ca500d;
 }
@@ -525,24 +525,21 @@ input:not([type=checkbox]):not([type=radio]) {
   height: auto;
   padding: 0;
 }
-.overlay .custom-modal .modal-body .card .description {
+.overlay .custom-modal .modal-body .card .card-container {
   font-size: 18px;
   padding: 0;
 }
-.overlay .custom-modal .modal-body .card .description .card-header {
+.overlay .custom-modal .modal-body .card .card-container .card-header {
   font-size: 22px;
 }
-.overlay .custom-modal .modal-body .card .description .card-body {
+.overlay .custom-modal .modal-body .card .card-container .card-body {
   padding: 15px 0;
 }
-.overlay .custom-modal .modal-body .card .description .card-footer {
+.overlay .custom-modal .modal-body .card .card-container .card-footer {
   font-weight: bold;
 }
 .overlay .custom-modal .modal-body .form-card {
   margin: 15px 0;
-}
-.overlay .custom-modal .modal-body .two-rows .form-card-board {
-  grid-template-rows: 1fr 1fr;
 }
 .overlay .custom-modal .modal-body .form-group.rtl label {
   font-size: 14px;
@@ -566,7 +563,7 @@ input:not([type=checkbox]):not([type=radio]) {
   padding-top: 0;
   padding-bottom: 0;
 }
-.overlay .small-modal .modal-body .card .photo {
+.overlay .small-modal .modal-body .card .card-photo {
   width: 60%;
 }
 .overlay .small-modal .modal-body .form-group {
