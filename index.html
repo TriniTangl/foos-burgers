@@ -65,13 +65,13 @@
                     <a href="#" onclick="return false">View all</a>
                 </div>
                 <div class="category-content active">
-                    <h2 class="category-content-header">Burgers</h2>
-                    <div class="category-content-body">
+                    <h2 class="category-header">Burgers</h2>
+                    <div class="category-body">
                         <div class="card">
-                            <div class="photo">
+                            <div class="card-photo">
                                 <img alt="FooYa Burger" src="./img/foods/fooya_burger.jpg">
                             </div>
-                            <div class="description">
+                            <div class="card-container">
                                 <h4 class="card-header">FooYa Burger</h4>
                                 <div class="card-body">Pulled pork, ham, bacon, cheddar, crispy onions, signature grill
                                     sauce, potato bun with fries or chips.
@@ -83,10 +83,10 @@
                             </div>
                         </div>
                         <div class="card">
-                            <div class="photo">
+                            <div class="card-photo">
                                 <img alt="Foos Chicken" src="./img/foods/foos_chicken.jpg">
                             </div>
-                            <div class="description">
+                            <div class="card-container">
                                 <h4 class="card-header">Foos Chicken</h4>
                                 <div class="card-body">Cedar-seasoned chicken, cheddar, maple mustard, bacon, signature
                                     bun
@@ -101,18 +101,20 @@
                     </div>
                 </div>
                 <div class="category-content">
-                    <h2 class="category-content-header">Sides</h2>
-                    <div class="card custom">
-                        <button id="open-custom-modal">Open 'Customize' window</button>
-                        <button id="open-small-modal">Open 'May We Suggest' window</button>
+                    <h2 class="category-header">Sides</h2>
+                    <div class="category-body">
+                        <div class="card custom">
+                            <button id="open-custom-modal">Open 'Customize' window</button>
+                            <button id="open-small-modal">Open 'May We Suggest' window</button>
+                        </div>
                     </div>
                 </div>
                 <div class="category-content">
-                    <h2 class="category-content-header">Drinks</h2>
+                    <h2 class="category-header">Drinks</h2>
                     <div class="card">In progress...</div>
                 </div>
                 <div class="category-content">
-                    <h2 class="category-content-header">View all</h2>
+                    <h2 class="category-header">View all</h2>
                     <div class="card">In progress...</div>
                 </div>
             </div>
@@ -215,7 +217,7 @@
         <h2 class="modal-header">Customize</h2>
         <div class="modal-body">
             <div class="card">
-                <div class="description">
+                <div class="card-container">
                     <h4 class="card-header">FooYa Burger</h4>
                     <div class="card-body">
                         Pulled pork, ham, bacon, cheddar, crispy onions, signature grill sauce,
@@ -250,7 +252,7 @@
                     </div>
                 </div>
             </div>
-            <div class="form-card two-rows">
+            <div class="form-card">
                 <h3 class="form-card-title">Add a dessert?</h3>
                 <div class="form-card-board">
                     <div class="tile">
@@ -297,7 +299,7 @@
         <h2 class="modal-header">May we suggest</h2>
         <div class="modal-body">
             <div class="card">
-                <div class="photo">
+                <div class="card-photo">
                     <img alt="FooYa Burger" src="./img/foods/fooya_burger.jpg">
                 </div>
             </div>

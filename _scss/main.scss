@@ -153,20 +153,20 @@ input:not([type="checkbox"]):not([type="radio"]) {
             display: block;
         }
 
-        .category-content-header {
+        .category-header {
             font-size: 30px;
             font-weight: bold;
             line-height: 1;
             width: 100%;
             height: 140px;
-            padding: 95px 15px 15px 15px;
+            padding: 95px 15px 15px;
             text-align: left;
             text-transform: uppercase;
             color: $light-color;
             background: $category-header-bg 0 25% / 130% auto no-repeat;
         }
 
-        .category-content-body {
+        .category-body {
             display: flex;
             flex-direction: column;
             min-width: 100%;
@@ -180,7 +180,7 @@ input:not([type="checkbox"]):not([type="radio"]) {
     height: 200px;
     padding: 20px 15px;
 
-    .photo {
+    .card-photo {
         position: relative;
         overflow: hidden;
         width: 50%;
@@ -196,7 +196,7 @@ input:not([type="checkbox"]):not([type="radio"]) {
         }
     }
 
-    .description {
+    .card-container {
         font-size: inherit;
         width: 50%;
         padding: 0 15px;
@@ -634,7 +634,7 @@ input:not([type="checkbox"]):not([type="radio"]) {
                 height: auto;
                 padding: 0;
 
-                .description {
+                .card-container {
                     font-size: 18px;
                     padding: 0;
 
@@ -654,13 +654,6 @@ input:not([type="checkbox"]):not([type="radio"]) {
 
             .form-card {
                 margin: 15px 0;
-            }
-
-            .two-rows {
-
-                .form-card-board {
-                    grid-template-rows: 1fr 1fr;
-                }
             }
 
             .form-group.rtl {
@@ -697,7 +690,7 @@ input:not([type="checkbox"]):not([type="radio"]) {
                 padding-bottom: 0;
 
 
-                .photo {
+                .card-photo {
                     width: 60%;
                 }
             }
