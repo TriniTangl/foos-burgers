@@ -319,7 +319,7 @@ input:not([type=checkbox]):not([type=radio]) {
   position: relative;
   width: 40%;
   height: max-content;
-  margin: 10px 0;
+  margin-top: 5%;
   background-color: #ffffff;
 }
 .overlay .modal .close {
@@ -510,40 +510,41 @@ input:not([type=checkbox]):not([type=radio]) {
   border-right: none;
 }
 
-.overlay .big-modal {
+.overlay .custom-modal {
   min-width: 750px;
+  margin-top: 0;
 }
-.overlay .big-modal .modal-body .card {
+.overlay .custom-modal .modal-body .card {
   height: auto;
   padding: 0;
 }
-.overlay .big-modal .modal-body .card .card-container {
+.overlay .custom-modal .modal-body .card .card-container {
   font-size: 18px;
   padding: 0;
 }
-.overlay .big-modal .modal-body .card .card-container .card-header {
+.overlay .custom-modal .modal-body .card .card-container .card-header {
   font-size: 22px;
 }
-.overlay .big-modal .modal-body .card .card-container .card-body {
+.overlay .custom-modal .modal-body .card .card-container .card-body {
   padding: 15px 0;
 }
-.overlay .big-modal .modal-body .card .card-container .card-footer {
+.overlay .custom-modal .modal-body .card .card-container .card-footer {
   font-weight: bold;
 }
-.overlay .big-modal .modal-body .form-card {
+.overlay .custom-modal .modal-body .form-card {
   margin: 15px 0;
 }
-.overlay .big-modal .modal-body .form-group.rtl label {
+.overlay .custom-modal .modal-body .form-group.rtl label {
   font-size: 14px;
 }
-.overlay .big-modal .modal-body .form-group.rtl input {
+.overlay .custom-modal .modal-body .form-group.rtl input {
   width: 50px;
 }
-.overlay .big-modal .modal-footer {
+.overlay .custom-modal .modal-footer {
   display: flex;
   justify-content: flex-end;
 }
-.overlay .big-modal .modal-footer button {
+.overlay .custom-modal .modal-footer button {
   margin-left: 10px;
 }
 .overlay .small-modal {
