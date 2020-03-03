@@ -260,37 +260,6 @@ input:not([type=checkbox]):not([type=radio]) {
   background-color: #ca500d;
 }
 
-.two-column-list .row {
-  display: flex;
-  justify-content: space-between;
-}
-.two-column-list .row.bordered {
-  border-bottom: 1px solid #b84026;
-}
-
-.mini-card .title {
-  text-transform: capitalize;
-}
-.mini-card .edit-buttons {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 3px;
-}
-.mini-card .edit-buttons button {
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 1;
-  margin-right: 2px;
-  padding: 2px 3px;
-  text-transform: lowercase;
-  color: #b84026;
-  border: 1px solid #e5e4e3;
-  background-color: #ffffff;
-}
-.mini-card .edit-buttons button:hover {
-  background-color: #f7edeb;
-}
-
 .warning-block {
   font-size: inherit;
   font-weight: bold;
@@ -457,17 +426,55 @@ input:not([type=checkbox]):not([type=radio]) {
 .wrapper main .sidebar .tab-group h2 {
   text-transform: capitalize;
 }
-.wrapper main .sidebar .tab-group .two-column-list {
+.wrapper main .sidebar .tab-group table {
+  width: 100%;
   margin: 15px 0 30px;
+  table-layout: fixed;
+  border-collapse: collapse;
   border-top: 1px solid #b84026;
 }
-.wrapper main .sidebar .tab-group .two-column-list .row > *:not(.mini-card) {
+.wrapper main .sidebar .tab-group table tr:not(.bordered-row) > .left-item {
   font-weight: bold;
   text-transform: uppercase;
   color: #b84026;
 }
-.wrapper main .sidebar .tab-group .two-column-list .row > * {
+.wrapper main .sidebar .tab-group table tr.bordered-row > td {
+  border-bottom: 1px solid #b84026;
+}
+.wrapper main .sidebar .tab-group table tr td {
   padding: 8px 0;
+}
+.wrapper main .sidebar .tab-group table tr td.left-item {
+  width: 70%;
+}
+.wrapper main .sidebar .tab-group table tr td.left-item .title {
+  text-transform: capitalize;
+}
+.wrapper main .sidebar .tab-group table tr td.right-item {
+  font-weight: bold;
+  width: 30%;
+  text-align: right;
+  vertical-align: top;
+  color: #b84026;
+}
+.wrapper main .sidebar .tab-group table .edit-buttons {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 3px;
+}
+.wrapper main .sidebar .tab-group table .edit-buttons button {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1;
+  margin-right: 2px;
+  padding: 2px 3px;
+  text-transform: lowercase;
+  color: #b84026;
+  border: 1px solid #e5e4e3;
+  background-color: #ffffff;
+}
+.wrapper main .sidebar .tab-group table .edit-buttons button:hover {
+  background-color: #f7edeb;
 }
 .wrapper main .sidebar .tab-group form .form-group {
   padding-top: 15px;
