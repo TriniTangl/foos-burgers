@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap&subset=latin-ext");
-* {
+@import url("https://fonts.googleapis.com/css?family=Mukta:400,500,600,700&display=swap&subset=latin-ext");
+*,
+html,
+body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -40,13 +43,13 @@ body {
 }
 
 .error-login {
-  font-weight: bold;
   display: block;
   text-align: center;
+  font-weight: bold;
 }
 .error-login .link {
-  font-size: inherit;
   display: inline-block;
+  font-size: inherit;
 }
 
 .wrapper {
@@ -94,6 +97,9 @@ body {
 .wrapper main .menu {
   width: 70%;
   padding: 30px 25px;
+}
+.wrapper main .menu .details {
+  font-family: "Mukta", sans-serif;
 }
 .wrapper main .menu .details h2 {
   font-size: 22px;

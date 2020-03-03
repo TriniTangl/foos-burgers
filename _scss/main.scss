@@ -1,71 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap&subset=latin-ext');
 @import "config";
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html,
-body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    height: 100%;
-    color: $secondary-color;
-}
-
-.link {
-    font-size: 14px;
-    display: block;
-    text-decoration: none;
-    color: $primary-dark-color;
-
-    &:hover {
-        text-decoration: underline;
-    }
-}
-
-.btn {
-    font-weight: bold;
-    line-height: 36px;
-    display: block;
-    padding: 0 25px;
-    cursor: pointer;
-    text-align: center;
-    text-transform: uppercase;
-    color: $primary-light-color;
-    border: none;
-    background-color: $primary-color;
-
-    &:hover {
-        background-color: $primary-dark-color;
-    }
-}
-
-.error-login {
-    font-weight: bold;
-    display: block;
-    text-align: center;
-
-    .link {
-        font-size: inherit;
-        display: inline-block;
-    }
-}
+@import "basic";
 
 .wrapper {
     display: flex;
     flex-direction: column;
     width: 100%;
     min-height: 100%;
-    background-color: $light-dark-color;
+    background-color: $light-dark;
 
     header {
         flex: 0 0 auto;
         width: 100%;
         height: 150px;
-        background: $primary-color;
+        background: $primary;
 
         .header-container {
             display: flex;
@@ -84,10 +31,10 @@ body {
                     text-align: center;
                     text-decoration: none;
                     text-transform: uppercase;
-                    color: $light-color;
+                    color: $light;
 
                     &:hover {
-                        background-color: $primary-dark-color;
+                        background-color: $primary-dark;
                     }
                 }
             }
@@ -99,13 +46,15 @@ body {
         flex: 1 0 auto;
         justify-content: space-between;
         margin: 0 10%;
-        background: $light-color;
+        background: $light;
 
         .menu {
             width: 70%;
             padding: 30px 25px;
 
             .details {
+                font-family: $mukta-font;
+
                 h2 {
                     font-size: 22px;
                     line-height: 24px;
@@ -152,8 +101,8 @@ body {
                         width: 150px;
                         margin: 2px 0;
                         text-decoration: none;
-                        color: $secondary-color;
-                        background-color: $secondary-light-color;
+                        color: $secondary;
+                        background-color: $secondary-light;
 
                         &:first-child {
                             margin-top: 0;
@@ -164,12 +113,12 @@ body {
                         }
 
                         &:hover {
-                            background-color: $light-dark-color;
+                            background-color: $light-dark;
                         }
 
                         &.active {
-                            color: $light-color;
-                            background-color: $secondary-dark-color;
+                            color: $light;
+                            background-color: $secondary-dark;
                         }
                     }
                 }
@@ -191,8 +140,8 @@ body {
                         padding: 95px 15px 15px 15px;
                         text-align: left;
                         text-transform: uppercase;
-                        color: $light-color;
-                        background-image: $foos-chicken-img;
+                        color: $light;
+                        background-image: $foos-chicken;
                         background-repeat: no-repeat;
                         background-position: 0 25%;
                         background-size: 130% auto;
@@ -227,7 +176,7 @@ body {
                             h4 {
                                 font-size: 14px;
                                 font-weight: bold;
-                                color: $primary-dark-color;
+                                color: $primary-dark;
                             }
 
                             .composition {
@@ -239,7 +188,7 @@ body {
                             .info {
                                 font-weight: 400;
                                 padding-top: 10px;
-                                color: $primary-color;
+                                color: $primary;
 
                                 .calories {
                                     float: right;
@@ -271,16 +220,16 @@ body {
                     text-align: center;
                     text-decoration: none;
                     text-transform: capitalize;
-                    color: $secondary-color;
+                    color: $secondary;
                     border: none;
-                    background-color: $secondary-light-color;
+                    background-color: $secondary-light;
 
                     &:hover {
-                        background-color: $light-dark-color;
+                        background-color: $light-dark;
                     }
 
                     &.active {
-                        background-color: $light-color;
+                        background-color: $light;
                     }
                 }
 
@@ -313,7 +262,7 @@ body {
                                 .description {
                                     font-weight: bold;
                                     text-transform: uppercase;
-                                    color: $primary-dark-color;
+                                    color: $primary-dark;
                                 }
                             }
 
@@ -339,7 +288,7 @@ body {
                                     width: 30%;
                                     text-align: right;
                                     vertical-align: top;
-                                    color: $primary-dark-color;
+                                    color: $primary-dark;
                                 }
                             }
                         }
@@ -350,7 +299,7 @@ body {
 
                             a {
                                 text-decoration: none;
-                                color: $primary-dark-color;
+                                color: $primary-dark;
                             }
                         }
                     }
@@ -387,7 +336,7 @@ body {
         flex: 0 0 auto;
         width: 100%;
         height: 20px;
-        background: $primary-dark-color;
+        background: $primary-dark;
 
         .footer-container {
             position: absolute;
@@ -402,7 +351,7 @@ body {
             address {
                 font-size: 10px;
                 font-style: normal;
-                color: $primary-color;
+                color: $primary;
 
                 .link {
                     font-size: 10px;
