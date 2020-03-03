@@ -1,0 +1,114 @@
+@import "config";
+
+.wrapper {
+
+    .main-content {
+        width: 70%;
+
+        h2 {
+            font-size: 22px;
+            text-transform: uppercase;
+        }
+
+        .warning-block {
+            font-size: 14px;
+            margin-top: 15px;
+            padding: 10px 0;
+            border-top: $primary-dark-border;
+            border-bottom: $primary-dark-border;
+        }
+
+        .category-group {
+            margin-top: 20px;
+
+            .card-container {
+                width: 60%;
+
+                .card-body {
+                    font-size: 12px;
+                    line-height: 1.4;
+                }
+
+                .card-footer {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+
+            @media screen and (max-width: 1024px) {
+                .card-photo {
+                    width: 40%;
+                    height: 75%;
+                }
+
+                .card-footer {
+                    flex-direction: column-reverse;
+                    justify-content: unset;
+                }
+
+            }
+        }
+    }
+
+    .sidebar {
+        width: 30%;
+        padding-bottom: 25px;
+        border-left: $secondary-light-border;
+
+        h2 {
+            text-transform: capitalize;
+        }
+
+        form button {
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .warning-block {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .two-column-list {
+            margin: 15px 0 30px;
+            border-top: $primary-dark-border;
+
+            .row {
+
+                & > *:not(.mini-card) {
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: $primary-dark-color;
+                }
+
+                & > * {
+                    padding: 8px 0;
+                }
+            }
+        }
+
+        .form-group {
+            padding-top: 15px;
+        }
+    }
+}
+
+.card.custom {
+    height: auto;
+
+    button {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .card.custom {
+        flex-direction: column;
+        height: auto;
+
+        button {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+}
