@@ -181,13 +181,14 @@ input:not([type="checkbox"]):not([type="radio"]) {
     display: flex;
     justify-content: space-between;
     height: 200px;
-    padding: 20px 15px;
+    padding: 15px 10px;
 
     .card-photo {
         position: relative;
         overflow: hidden;
         width: 50%;
         height: 100%;
+        margin: 5px;
         text-align: center;
 
         img {
@@ -202,7 +203,7 @@ input:not([type="checkbox"]):not([type="radio"]) {
     .card-container {
         font-size: inherit;
         width: 50%;
-        padding: 0 15px;
+        margin: 5px;
 
         .card-header {
             font-weight: bold;
