@@ -86,12 +86,18 @@ button:hover {
   font-weight: bold;
   line-height: 1;
   width: 100%;
-  margin-bottom: 2px;
+  margin: 2px 0;
   padding: 7px 5px;
   text-decoration: none;
   text-transform: uppercase;
   color: #424243;
   background-color: #e5e4e3;
+}
+.category-group .category-switch a:first-child {
+  margin-top: 0;
+}
+.category-group .category-switch a:last-child {
+  margin-bottom: 0;
 }
 .category-group .category-switch a:hover {
   background-color: #f2f1f0;
