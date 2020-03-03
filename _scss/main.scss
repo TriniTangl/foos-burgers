@@ -11,16 +11,13 @@ html,
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
-    line-height: 1.25;
     height: 100%;
     color: $secondary-color;
 }
 
-a {
-    font-size: inherit;
-    cursor: pointer;
-    text-align: center;
-
+.link {
+    font-size: 14px;
+    display: block;
     text-decoration: none;
     color: $primary-dark-color;
 
@@ -29,13 +26,13 @@ a {
     }
 }
 
-button {
+.btn {
     font-weight: bold;
+    line-height: 36px;
     display: block;
-    padding: 12px 25px;
+    padding: 0 25px;
     cursor: pointer;
     text-align: center;
-    text-decoration: none;
     text-transform: uppercase;
     color: $primary-light-color;
     border: none;
@@ -46,188 +43,18 @@ button {
     }
 }
 
-.tab-group {
-    width: 100%;
-
-    .tab-switch {
-        display: flex;
-
-        a {
-            font-size: 16px;
-            font-weight: bold;
-            line-height: 1;
-            flex-grow: 1;
-            padding: 12px 5px;
-            text-decoration: none;
-            text-transform: capitalize;
-            color: $secondary-color;
-            background-color: $secondary-light-color;
-
-            &:hover {
-                background-color: $light-dark-color;
-            }
-
-            &.active {
-                background-color: $light-color;
-            }
-        }
-    }
-
-    .tab-content {
-        display: none;
-        padding: 20px;
-
-        &.active {
-            display: block;
-        }
-
-    }
-}
-
-.category-group {
-    $category-switch-width: 150px;
-
-    display: flex;
-    justify-content: space-between;
-
-    .category-switch {
-        display: flex;
-        flex-direction: column;
-        min-width: $category-switch-width;
-
-        a {
-            font-size: 14px;
-            font-weight: bold;
-            line-height: 1;
-            width: 100%;
-            margin: 2px 0;
-            padding: 7px 5px;
-            text-decoration: none;
-            text-transform: uppercase;
-            color: $secondary-color;
-            background-color: $secondary-light-color;
-
-            &:first-child {
-                margin-top: 0;
-            }
-
-            &:last-child {
-                margin-bottom: 0;
-            }
-
-            &:hover {
-                background-color: $light-dark-color;
-            }
-
-            &.active {
-                color: $light-color;
-                background-color: $secondary-dark-color;
-            }
-        }
-    }
-
-    .category-card {
-        display: none;
-        width: 100%;
-        margin-left: 10px;
-
-        &.active {
-            display: block;
-        }
-
-        .category-card-header {
-            font-size: 30px;
-            font-weight: bold;
-            line-height: 1;
-            width: 100%;
-            height: 140px;
-            padding: 95px 15px 15px 15px;
-            text-align: left;
-            text-transform: uppercase;
-            color: $light-color;
-            background: $category-header-bg 0 25% / 130% auto no-repeat;
-        }
-
-        .category-card-body {
-            display: flex;
-            flex-direction: column;
-            min-width: 100%;
-        }
-    }
-}
-
-.card {
-    display: flex;
-    justify-content: space-between;
-    height: 200px;
-    padding: 20px 15px;
-
-    .photo {
-        position: relative;
-        overflow: hidden;
-        width: 50%;
-        height: 100%;
-        text-align: center;
-
-        img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            height: 100%;
-            transform: translateY(-50%) translateX(-50%);
-        }
-    }
-
-    .description {
-        font-size: inherit;
-        width: 50%;
-        padding: 0 15px;
-
-        .card-header {
-            font-weight: bold;
-            color: $primary-dark-color;
-        }
-
-        .card-body {
-            padding: 5px 0;
-        }
-
-        .card-footer {
-            padding-top: 10px;
-            color: $primary-color;
-        }
-    }
-
-
-}
-
-.form-group {
-
-    .title {
-        font-weight: bold;
-    }
-
-    label {
-        display: block;
-        width: max-content;
-        padding-top: 5px;
-        cursor: pointer;
-    }
-}
-
-.warning-block {
-    font-size: inherit;
+.error-login {
     font-weight: bold;
     display: block;
+    text-align: center;
 
-    a {
+    .link {
+        font-size: inherit;
         display: inline-block;
     }
 }
 
 .wrapper {
-    $page-margin: 10%;
-    
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -240,19 +67,21 @@ button {
         height: 150px;
         background: $primary-color;
 
-        .header-content {
+        .header-container {
             display: flex;
             align-items: center;
             justify-content: space-between;
             height: 100%;
-            margin: 0 $page-margin;
+            margin: 0 10%;
             padding: 0 25px;
 
             nav {
                 display: flex;
 
                 a {
+                    display: block;
                     padding: 10px 20px;
+                    text-align: center;
                     text-decoration: none;
                     text-transform: uppercase;
                     color: $light-color;
@@ -272,29 +101,37 @@ button {
         margin: 0 10%;
         background: $light-color;
 
-        .main-content {
+        .menu {
             width: 70%;
             padding: 30px 25px;
 
-            h2 {
-                font-size: 22px;
-                text-transform: uppercase;
-            }
+            .details {
+                h2 {
+                    font-size: 22px;
+                    line-height: 24px;
+                    text-transform: uppercase;
+                }
 
-            table {
-                font-size: 13px;
-                min-width: 500px;
-                margin-top: 20px;
-                table-layout: fixed;
-                text-align: left;
+                .link {
+                    text-decoration: underline;
+                }
 
-                th {
-                    font-weight: normal;
+                table {
+                    font-size: 13px;
+                    min-width: 500px;
+                    margin-top: 20px;
+                    table-layout: fixed;
+                    text-align: left;
+
+                    th {
+                        font-weight: normal;
+                    }
                 }
             }
 
-            .warning-block {
+            .optional-message {
                 font-size: 14px;
+                font-weight: bold;
                 margin-top: 15px;
                 padding: 10px 0;
                 border-top: $primary-dark-border;
@@ -302,111 +139,243 @@ button {
             }
 
             .category-group {
+                display: flex;
+                justify-content: space-between;
                 margin-top: 20px;
 
-                .card {
+                .category-switch {
+                    width: 150px;
 
-                    .card-body {
-                        font-size: 12px;
-                        line-height: 1.4;
-                    }
+                    a {
+                        font-size: 14px;
+                        line-height: 30px;
+                        width: 150px;
+                        margin: 2px 0;
+                        text-decoration: none;
+                        color: $secondary-color;
+                        background-color: $secondary-light-color;
 
-                    .card-footer {
-                        display: flex;
-                        justify-content: space-between;
+                        &:first-child {
+                            margin-top: 0;
+                        }
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        &:hover {
+                            background-color: $light-dark-color;
+                        }
+
+                        &.active {
+                            color: $light-color;
+                            background-color: $secondary-dark-color;
+                        }
                     }
                 }
+
+                .category-menu {
+                    display: none;
+                    width: calc(100% - (150px + 10px));
+
+                    &.active {
+                        display: block;
+                    }
+
+                    h2 {
+                        font-size: 30px;
+                        font-weight: bold;
+                        line-height: 30px;
+                        width: 100%;
+                        height: 140px;
+                        padding: 95px 15px 15px 15px;
+                        text-align: left;
+                        text-transform: uppercase;
+                        color: $light-color;
+                        background-image: $foos-chicken-img;
+                        background-repeat: no-repeat;
+                        background-position: 0 25%;
+                        background-size: 130% auto;
+                    }
+
+                    .category-item {
+                        display: flex;
+                        justify-content: space-between;
+                        height: 200px;
+                        padding: 20px 15px;
+
+                        .photo {
+                            position: relative;
+                            overflow: hidden;
+                            width: 50%;
+                            height: 100%;
+                            text-align: center;
+
+                            img {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                height: 100%;
+                                transform: translateY(-50%) translateX(-50%);
+                            }
+                        }
+
+                        .description {
+                            width: 50%;
+                            padding: 0 15px;
+
+                            h4 {
+                                font-size: 14px;
+                                font-weight: bold;
+                                color: $primary-dark-color;
+                            }
+
+                            .composition {
+                                font-size: 12px;
+                                line-height: 16px;
+                                padding: 5px 0;
+                            }
+
+                            .info {
+                                font-weight: 400;
+                                padding-top: 10px;
+                                color: $primary-color;
+
+                                .calories {
+                                    float: right;
+                                }
+                            }
+                        }
+                    }
+                }
+
             }
         }
 
-        .sidebar {
+        .orders {
             width: 30%;
             padding-bottom: 25px;
             border-left: $secondary-light-border;
 
             .tab-group {
+                width: 100%;
 
-                .warning-block {
-                    padding: 10px;
+                .tab-link {
+                    font-size: 16px;
+                    font-weight: bold;
+                    line-height: 34px;
+                    float: left;
+                    width: 50%;
+                    padding: 0 15px;
+                    cursor: pointer;
                     text-align: center;
-                }
-
-                h2 {
+                    text-decoration: none;
                     text-transform: capitalize;
+                    color: $secondary-color;
+                    border: none;
+                    background-color: $secondary-light-color;
+
+                    &:hover {
+                        background-color: $light-dark-color;
+                    }
+
+                    &.active {
+                        background-color: $light-color;
+                    }
                 }
 
-                table {
-                    width: 100%;
-                    margin: 15px 0 30px;
-                    table-layout: fixed;
-                    border-collapse: collapse;
-                    border-top: $primary-dark-border;
+                .tab-content {
+                    display: none;
+                    height: 100%;
+                    padding: calc(20px + 34px) 20px 20px;
 
-                    tr {
-                        &:not(.bordered-row) > .left-item {
-                            font-weight: bold;
-                            text-transform: uppercase;
-                            color: $primary-dark-color;
-                        }
+                    &.active {
+                        display: block;
+                    }
 
-                        &.bordered-row > td {
-                            border-bottom: $primary-dark-border;
-                        }
+                    .favourites {
+                        padding: 10px;
+                    }
 
-                        td {
-                            padding: 8px 0;
+                    h2 {
+                        text-transform: capitalize;
+                    }
 
-                            &.left-item {
-                                width: 70%;
+                    .orders-list {
+                        width: 100%;
+                        margin: 15px 0 30px;
+                        table-layout: fixed;
+                        border-collapse: collapse;
+                        border-top: $primary-dark-border;
 
-                                .title {
-                                    text-transform: capitalize;
+                        tr {
+                            &:not(.order-item) {
+                                .description {
+                                    font-weight: bold;
+                                    text-transform: uppercase;
+                                    color: $primary-dark-color;
                                 }
                             }
 
-                            &.right-item {
-                                font-weight: bold;
-                                width: 30%;
-                                text-align: right;
-                                vertical-align: top;
+                            &.order-item {
+                                td {
+                                    border-bottom: $primary-dark-border;
+                                }
+                            }
+
+                            td {
+                                padding: 8px 0;
+
+                                &.description {
+                                    width: 70%;
+
+                                    .name {
+                                        text-transform: capitalize;
+                                    }
+                                }
+
+                                &.price {
+                                    font-weight: bold;
+                                    width: 30%;
+                                    text-align: right;
+                                    vertical-align: top;
+                                    color: $primary-dark-color;
+                                }
+                            }
+                        }
+
+                        .edit-buttons {
+                            font-size: 14px;
+                            font-weight: bold;
+
+                            a {
+                                text-decoration: none;
                                 color: $primary-dark-color;
                             }
                         }
                     }
 
-                    .edit-buttons {
-                        display: flex;
-                        justify-content: start;
-                        margin-top: 3px;
+                    .order-options {
+                        .form-group {
+                            padding-top: 15px;
 
-                        button {
-                            font-size: 14px;
-                            font-weight: bold;
-                            line-height: 1;
-                            margin-right: 2px;
-                            padding: 2px 3px;
-                            text-transform: lowercase;
-                            color: $primary-dark-color;
-                            border: $secondary-light-border;
-                            background-color: $light-color;
+                            .title {
+                                font-weight: bold;
+                            }
 
-                            &:hover {
-                                background-color: $primary-light-color;
+                            label {
+                                display: block;
+                                width: max-content;
+                                padding-top: 5px;
+                                cursor: pointer;
+
                             }
                         }
-                    }
 
-                }
-
-                form {
-
-                    .form-group {
-                        padding-top: 15px;
-                    }
-
-                    button {
-                        width: 100%;
-                        margin-top: 30px;
+                        .btn {
+                            width: 100%;
+                            margin-top: 30px;
+                        }
                     }
                 }
             }
@@ -420,26 +389,32 @@ button {
         height: 20px;
         background: $primary-dark-color;
 
-        .footer-content {
-            font-size: 11px;
+        .footer-container {
             position: absolute;
-            right: $page-margin;
+            right: 10%;
             bottom: 25px;
-            left: $page-margin;
+            left: 10%;
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 0 5px;
 
             address {
+                font-size: 10px;
                 font-style: normal;
                 color: $primary-color;
+
+                .link {
+                    font-size: 10px;
+                    display: inline-block;
+                }
             }
 
             nav {
                 display: flex;
 
-                a {
+                .link {
+                    font-size: 10px;
                     padding: 0 5px;
                     text-transform: capitalize;
                     border-right: $primary-dark-border;
@@ -450,5 +425,7 @@ button {
                 }
             }
         }
+
+
     }
 }

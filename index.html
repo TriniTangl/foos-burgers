@@ -5,7 +5,7 @@
     <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
           name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
-    <title>Foos Burger</title>
+    <title>foosBurger</title>
     <link href="favicon.ico" rel="favicon">
     <link href="icon.png" rel="apple-touch-icon">
     <link href="/css/normalize.css" rel="stylesheet" type="text/css">
@@ -15,8 +15,8 @@
 <body>
 <div class="wrapper">
     <header>
-        <div class="header-content">
-            <img alt="Foos Burgers Logo" src="/img/logo.png">
+        <div class="header-container">
+            <img alt="Foos Burgers Logo" class="logo" src="/img/logo.png">
             <nav>
                 <a href="#">Home</a>
                 <a href="#">View menus</a>
@@ -26,142 +26,135 @@
         </div>
     </header>
     <main>
-        <div class="main-content">
-            <h2>Foos Burger New York</h2>
-            <small>
-                26 Broadway, New York, NY 10004<br>
-                <a href="#">Change Location</a>
-            </small>
-            <table>
-                <tbody>
-                <tr>
-                    <th>Phone:</th>
-                    <td>(999) 888 0000</td>
-                </tr>
-                <tr>
-                    <th>Pickup Hours:</th>
-                    <td>Open today 24 hrs</td>
-                </tr>
-                <tr>
-                    <th>Pickup Hours:</th>
-                    <td>10:30am-11:45pm</td>
-                </tr>
-                <tr>
-                    <th>Accepted Cards:</th>
-                    <td>Mastercard, Visa, American Express, Discover</td>
-                </tr>
-                </tbody>
-            </table>
-            <div class="warning-block">
+        <div class="menu">
+            <div class="details">
+                <h2>Foos Burger New York</h2>
+                <small>26 Broadway, New York, NY 10004</small>
+                <a class="link" href="#">Change Location</a>
+                <table>
+                    <tbody>
+                    <tr>
+                        <th>Phone:</th>
+                        <td>(999) 888 0000</td>
+                    </tr>
+                    <tr>
+                        <th>Pickup Hours:</th>
+                        <td>Open today 24 hrs</td>
+                    </tr>
+                    <tr>
+                        <th>Pickup Hours:</th>
+                        <td>10:30am-11:45pm</td>
+                    </tr>
+                    <tr>
+                        <th>Accepted Cards:</th>
+                        <td>Mastercard, Visa, American Express, Discover</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="optional-message">
                 Optional Customer facing message. Online ordering is fast and easy.<br>
                 Log in or create a new account and then order away.
-            </div>
+            </p>
             <div class="category-group">
                 <div class="category-switch">
-                    <a class="active" href="#" onclick="return false">Burgers</a>
-                    <a href="#" onclick="return false">Sides</a>
-                    <a href="#" onclick="return false">Drinks</a>
-                    <a href="#" onclick="return false">View all</a>
+                    <a class="btn active" href="#" onclick="return false">Burgers</a>
+                    <a class="btn" href="#" onclick="return false">Sides</a>
+                    <a class="btn" href="#" onclick="return false">Drinks</a>
+                    <a class="btn" href="#" onclick="return false">View all</a>
                 </div>
-                <div class="category-card active">
-                    <h2 class="category-card-header">Burgers</h2>
-                    <div class="category-card-body">
-                        <div class="card">
-                            <div class="photo">
-                                <img alt="FooYa Burger" src="./img/foods/fooya_burger.jpg">
-                            </div>
-                            <div class="description">
-                                <h4 class="card-header">FooYa Burger</h4>
-                                <div class="card-body">Pulled pork, ham, bacon, cheddar, crispy onions, signature grill
-                                    sauce, potato bun with fries or chips.
-                                </div>
-                                <div class="card-footer">
-                                    <span>$10.99</span>
-                                    <span>530 Calories</span>
-                                </div>
-                            </div>
+                <div class="category-menu active">
+                    <h2>Burgers</h2>
+                    <div class="category-item">
+                        <div class="photo">
+                            <img alt="FooYa Burger" src="./img/foods/fooya_burger.jpg">
                         </div>
-                        <div class="card">
-                            <div class="photo">
-                                <img alt="Foos Chicken" src="./img/foods/foos_chicken.jpg">
-                            </div>
-                            <div class="description">
-                                <h4 class="card-header">Foos Chicken</h4>
-                                <div class="card-body">Cedar-seasoned chicken, cheddar, maple mustard, bacon, signature
-                                    bun
-                                    with fries or chips.
-                                </div>
-                                <div class="card-footer">
-                                    <span>$8.99</span>
-                                    <span>450 Calories</span>
-                                </div>
-                            </div>
+                        <div class="description">
+                            <h4>FooYa Burger</h4>
+                            <p class="composition">Pulled pork, ham, bacon, cheddar, crispy onions, signature grill
+                                sauce, potato bun with fries or chips.</p>
+                            <p class="info">
+                                <span class="price">$10.99</span>
+                                <span class="calories">530 Calories</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="category-item">
+                        <div class="photo">
+                            <img alt="Foos Chicken" src="./img/foods/foos_chicken.jpg">
+                        </div>
+                        <div class="description">
+                            <h4>Foos Chicken</h4>
+                            <p class="composition">Cedar-seasoned chicken, cheddar, maple mustard, bacon, signature bun
+                                with fries or chips.</p>
+                            <p class="info">
+                                <span class="price">$8.99</span>
+                                <span class="calories">450 Calories</span>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="category-card">
-                    <h2 class="category-card-header">Sides</h2>
-                    <div class="card">In progress...</div>
+                <div class="category-menu">
+                    <h2>Sides</h2>
+                    <div class="category-item">In progress...</div>
                 </div>
-                <div class="category-card">
-                    <h2 class="category-card-header">Drinks</h2>
-                    <div class="card">In progress...</div>
+                <div class="category-menu">
+                    <h2>Drinks</h2>
+                    <div class="category-item">In progress...</div>
                 </div>
-                <div class="category-card">
-                    <h2 class="category-card-header">View all</h2>
-                    <div class="card">In progress...</div>
+                <div class="category-menu">
+                    <h2>View all</h2>
+                    <div class="category-item">In progress...</div>
                 </div>
             </div>
         </div>
-        <div class="sidebar">
+        <div class="orders">
             <div class="tab-group">
-                <div class="tab-switch">
-                    <a class="active" href="#" onclick="return false">Favorites</a>
-                    <a href="#" onclick="return false">Group order</a>
-                </div>
+                <a class="tab-link active" href="#" onclick="return false">Favorites</a>
+                <a class="tab-link" href="#" onclick="return false">Group order</a>
                 <div class="tab-content active">
-                    <div class="warning-block">
-                        <a class="link" href="#">Login</a> or <a class="link" href="#">Register</a><br>
-                        to use this feature.
+                    <div class="favourites">
+                        <div class="error-login">
+                            <a class="link" href="#">Login</a> or <a class="link" href="#">Register</a><br>
+                            to use this feature.
+                        </div>
                     </div>
                     <h2>Order contents</h2>
-                    <table>
+                    <table class="orders-list">
                         <tbody>
-                        <tr class="bordered-row">
-                            <td class="left-item">
-                                <div class="title">Savory cedar salmon</div>
+                        <tr class="order-item">
+                            <td class="description">
+                                <span class="name">Savory cedar salmon</span>
                                 <div class="edit-buttons">
-                                    <button type="button">edit</button>
-                                    <button type="button">remove</button>
+                                    [<a href="#" onclick="return false">edit</a> | <a href="#" onclick="return false">remove</a>]
                                 </div>
                             </td>
-                            <td class="right-item">$0.00</td>
+                            <td class="price">$0.00</td>
                         </tr>
-                        <tr class="bordered-row">
-                            <td class="left-item">
-                                <div class="title">Foos chicken</div>
+                        <tr class="order-item">
+                            <td class="description">
+                                <span class="name">Foos chicken</span>
                                 <div class="edit-buttons">
-                                    <button type="button">edit</button>
-                                    <button type="button">remove</button>
+                                    [<a href="#" onclick="return false">edit</a> | <a href="#" onclick="return false">remove</a>]
                                 </div>
                             </td>
-                            <td class="right-item">$0.00</td>
+                            <td class="price">$0.00</td>
                         </tr>
                         <tr>
-                            <td class="left-item">Sub total</td>
-                            <td class="right-item">$0.00</td>
+                            <td class="description">Sub total</td>
+                            <td class="price">$0.00</td>
                         </tr>
                         <tr>
-                            <td class="left-item">Tax</td>
-                            <td class="right-item">$0.00</td>
+                            <td class="description">Tax</td>
+                            <td class="price">$0.00</td>
                         </tr>
                         <tr>
-                            <td class="left-item">Total</td>
-                            <td class="right-item">$0.00</td>
+                            <td class="description">Total</td>
+                            <td class="price">$0.00</td>
                         </tr>
                         </tbody>
                     </table>
-                    <form>
+                    <form class="order-options">
                         <h2>Order options</h2>
                         <div class="form-group">
                             <div class="title">Select:</div>
@@ -181,7 +174,7 @@
                                 Later
                             </label>
                         </div>
-                        <button type="submit">Proceed to checkout</button>
+                        <button type="submit" class="btn">Proceed to checkout</button>
                     </form>
                 </div>
                 <div class="tab-content">
@@ -191,13 +184,13 @@
         </div>
     </main>
     <footer>
-        <div class="footer-content">
-            <address>Online Ordering by <a href="https://www.olo.com/">Olo.com</a></address>
+        <div class="footer-container">
+            <address>Online Ordering by <a class="link" href="https://www.olo.com/">Olo.com</a></address>
             <nav>
-                <a href="#">User Agreement</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Participating Locations</a>
-                <a href="#">Contact Us</a>
+                <a class="link" href="#">Participating Locations</a>
+                <a class="link" href="#">User Agreement</a>
+                <a class="link" href="#">Privacy Policy</a>
+                <a class="link" href="#">Contact Us</a>
             </nav>
         </div>
     </footer>

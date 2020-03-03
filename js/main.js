@@ -1,12 +1,12 @@
 window.onload = () => {
     document.querySelectorAll('.tab-group').forEach(group => {
-        group.querySelectorAll('.tab-switch > a').forEach(link => {
+        group.querySelectorAll('.tab-link').forEach(link => {
             link.addEventListener('click', selectTab);
         });
     });
 
     document.querySelectorAll('.category-group').forEach(group => {
-        group.querySelectorAll('.category-switch > a').forEach(link => {
+        group.querySelector('.category-switch').querySelectorAll('a').forEach(link => {
             link.addEventListener('click', selectCategory);
         });
     });
@@ -14,16 +14,16 @@ window.onload = () => {
 
 function selectTab(event) {
     if (!event.target.classList.contains('active')) {
-        const links = event.target.parentElement.parentElement.querySelectorAll('.tab-switch > a');
-        const contents = event.target.parentElement.parentElement.querySelectorAll('.tab-content');
+        const links = event.target.parentElement.querySelectorAll('.tab-link');
+        const contents = event.target.parentElement.querySelectorAll('.tab-content');
         setActiveClasses(links, contents, event.target.innerText);
     }
 }
 
 function selectCategory(event) {
     if (!event.target.classList.contains('active')) {
-        const links = event.target.parentElement.parentElement.querySelectorAll('.category-switch > a');
-        const contents = event.target.parentElement.parentElement.querySelectorAll('.category-card');
+        const links = event.target.parentElement.parentElement.querySelector('.category-switch').querySelectorAll('a');
+        const contents = event.target.parentElement.parentElement.querySelectorAll('.category-menu');
         setActiveClasses(links, contents, event.target.innerText);
     }
 }
