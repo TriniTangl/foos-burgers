@@ -25,7 +25,6 @@
             </nav>
         </div>
     </header>
-
     <main>
         <div class="main-content">
             <h2>Foos Burger New York</h2>
@@ -64,9 +63,9 @@
                     <a href="#" onclick="return false">Drinks</a>
                     <a href="#" onclick="return false">View all</a>
                 </div>
-                <div class="category-content active">
-                    <h2 class="category-content-header">Burgers</h2>
-                    <div class="category-content-body">
+                <div class="category-card active">
+                    <h2 class="category-card-header">Burgers</h2>
+                    <div class="category-card-body">
                         <div class="card">
                             <div class="photo">
                                 <img alt="FooYa Burger" src="./img/foods/fooya_burger.jpg">
@@ -100,24 +99,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="category-content">
-                    <h2 class="category-content-header">Sides</h2>
-                    <div class="card custom">
-                        <button id="open-custom-modal">Open 'Customize' window</button>
-                        <button id="open-small-modal">Open 'May We Suggest' window</button>
-                    </div>
-                </div>
-                <div class="category-content">
-                    <h2 class="category-content-header">Drinks</h2>
+                <div class="category-card">
+                    <h2 class="category-card-header">Sides</h2>
                     <div class="card">In progress...</div>
                 </div>
-                <div class="category-content">
-                    <h2 class="category-content-header">View all</h2>
+                <div class="category-card">
+                    <h2 class="category-card-header">Drinks</h2>
+                    <div class="card">In progress...</div>
+                </div>
+                <div class="category-card">
+                    <h2 class="category-card-header">View all</h2>
                     <div class="card">In progress...</div>
                 </div>
             </div>
         </div>
-
         <div class="sidebar">
             <div class="tab-group">
                 <div class="tab-switch">
@@ -171,14 +166,14 @@
                         <div class="form-group">
                             <div class="title">Select:</div>
                             <label for="select-1">
-                                <input checked id="select-1" name="select" type="radio" value="1">
+                                <input id="select-1" name="select" type="radio" value="1">
                                 Pickup
                             </label>
                         </div>
                         <div class="form-group">
                             <div class="title">Order for:</div>
                             <label for="order-1">
-                                <input checked id="order-1" name="order-for" type="radio" value="1">
+                                <input id="order-1" name="order-for" type="radio" value="1">
                                 Now
                             </label>
                             <label for="order-2">
@@ -195,7 +190,6 @@
             </div>
         </div>
     </main>
-
     <footer>
         <div class="footer-content">
             <address>Online Ordering by <a href="https://www.olo.com/">Olo.com</a></address>
@@ -207,137 +201,6 @@
             </nav>
         </div>
     </footer>
-</div>
-
-<div class="overlay">
-    <div class="modal custom-modal">
-        <button class="close"></button>
-        <h2 class="modal-header">Customize</h2>
-        <div class="modal-body">
-            <div class="card">
-                <div class="description">
-                    <h4 class="card-header">FooYa Burger</h4>
-                    <div class="card-body">
-                        Pulled pork, ham, bacon, cheddar, crispy onions, signature grill sauce,
-                        potato bun with fries or chips.
-                    </div>
-                    <div class="card-footer">$10.99</div>
-                </div>
-            </div>
-            <div class="form-card">
-                <h3 class="form-card-title">Customize:</h3>
-                <div class="form-card-board">
-                    <div class="tile">
-                        <input id="customize-1" name="customize-1" type="checkbox">
-                        <label for="customize-1">No bacon</label>
-                    </div>
-                    <div class="tile">
-                        <input id="customize-2" name="customize-2" type="checkbox">
-                        <label for="customize-2">No crispy onions</label>
-                    </div>
-                </div>
-            </div>
-            <div class="form-card">
-                <h3 class="form-card-title">Choose side:</h3>
-                <div class="form-card-board">
-                    <div class="tile">
-                        <input checked id="side-1" name="side" type="radio">
-                        <label for="side-1">Crispy red potatoes</label>
-                    </div>
-                    <div class="tile">
-                        <input id="side-2" name="side" type="radio">
-                        <label for="side-2">Substitute</label>
-                    </div>
-                </div>
-            </div>
-            <div class="form-card two-rows">
-                <h3 class="form-card-title">Add a dessert?</h3>
-                <div class="form-card-board">
-                    <div class="tile">
-                        <input id="dessert-1" name="dessert-1" type="checkbox">
-                        <label for="dessert-1">Blue ribbon brownie (+$6.69)</label>
-                    </div>
-                    <div class="tile">
-                        <input id="dessert-2" name="dessert-2" type="checkbox">
-                        <label for="dessert-2">Triple chocolate meltdown (+$6.69)</label>
-                    </div>
-                    <div class="tile">
-                        <input id="dessert-3" name="dessert-3" type="checkbox">
-                        <label for="dessert-3">Chocolate mousse shooter (+$3.99)</label>
-                    </div>
-                    <div class="tile">
-                        <input id="dessert-4" name="dessert-4" type="checkbox">
-                        <label for="dessert-4">Strawberry cheesecake shooter (+$3.99)</label>
-                    </div>
-                    <div class="tile">
-                        <input id="dessert-5" name="dessert-5" type="checkbox">
-                        <label for="dessert-5">Hot Fudge sundae shooter (+$3.99)</label>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <small>Enter any special instructions here: **No price altering substitutions/additions**</small>
-                <textarea id="special-instructions" name="special-instructions"></textarea>
-            </div>
-            <div class="form-group rtl">
-                <label for="quantity">Quantity:</label>
-                <input id="quantity" name="quantity" type="number" value="1">
-            </div>
-        </div>
-        <div class="modal-footer">
-            <button class="btn-bordered cancel" type="button">Cancel</button>
-            <button type="button">Add to cart</button>
-        </div>
-    </div>
-</div>
-
-<div class="overlay">
-    <div class="modal small-modal">
-        <button class="close"></button>
-        <h2 class="modal-header">May we suggest</h2>
-        <div class="modal-body">
-            <div class="card">
-                <div class="photo">
-                    <img alt="FooYa Burger" src="./img/foods/fooya_burger.jpg">
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="title">Beverages:</div>
-                <div class="two-group">
-                    <label class="left-item" for="beverages-1">
-                        <input checked id="beverages-1" name="beverages-1" type="checkbox">
-                        Fresh squeezed lemonade (02.49)
-                    </label>
-                    <label class="right-item" for="qty">
-                        Qty:
-                        <input id="qty" name="qty" type="number" value="1">
-                    </label>
-                </div>
-                <label for="beverages-2">
-                    <input id="beverages-2" name="beverages-2" type="checkbox">
-                    China mist iced tea (02.49)
-                </label>
-            </div>
-            <div class="form-group">
-                <div class="title">Desserts:</div>
-                <label for="desserts-1">
-                    <input id="desserts-1" name="desserts-1" type="checkbox">
-                    Cinnamon sugar snackers ($2.99)
-                </label>
-            </div>
-            <div class="form-group">
-                <div class="title">Extras</div>
-                <label for="extras-1">
-                    <input id="extras-1" name="extras-1" type="checkbox">
-                    Plasticware ($0.00)
-                </label>
-            </div>
-        </div>
-        <div class="modal-footer">
-            <button class="btn-bordered cancel" type="button">Cancel</button>
-            <button type="button">Add to cart</button>
-        </div>
-    </div>
 </div>
 
 <script src="js/main.js"></script>
