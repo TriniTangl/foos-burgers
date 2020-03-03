@@ -76,10 +76,7 @@ input:not([type=checkbox]):not([type=radio]) {
   font-size: 16px;
   font-weight: bold;
   line-height: 1;
-  display: flex;
-  align-items: center;
   flex-grow: 1;
-  justify-content: center;
   padding: 12px 5px;
   text-decoration: none;
   text-transform: capitalize;
@@ -434,25 +431,16 @@ input:not([type=checkbox]):not([type=radio]) {
 .wrapper main .main-content .category-group {
   margin-top: 20px;
 }
-@media screen and (max-width: 1024px) {
-  .wrapper main .main-content .category-group .card .card-photo {
-    width: 40%;
-    height: 75%;
-  }
-}
-.wrapper main .main-content .category-group .card .card-container {
-  width: 60%;
-}
-.wrapper main .main-content .category-group .card .card-container .card-body {
+.wrapper main .main-content .category-group .card .card-body {
   font-size: 12px;
   line-height: 1.4;
 }
-.wrapper main .main-content .category-group .card .card-container .card-footer {
+.wrapper main .main-content .category-group .card .card-footer {
   display: flex;
   justify-content: space-between;
 }
 @media screen and (max-width: 1024px) {
-  .wrapper main .main-content .category-group .card .card-container .card-footer {
+  .wrapper main .main-content .category-group .card .card-footer {
     flex-direction: column-reverse;
     justify-content: unset;
   }
