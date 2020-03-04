@@ -432,15 +432,18 @@ address {
   display: flex;
   flex: 1 0 auto;
   justify-content: space-between;
-  margin: 0 10%;
-  background: #ffffff;
+  padding: 0 10%;
+  background-color: #f2f1f0;
 }
 .wrapper main .main-content {
+  width: 100%;
   padding: 30px 25px;
+  background: #ffffff;
 }
 .wrapper main .sidebar {
   padding-bottom: 25px;
   border-left: 1px solid #e5e4e3;
+  background: #ffffff;
 }
 .wrapper footer {
   position: relative;
@@ -476,7 +479,7 @@ address {
     margin: 0 7%;
   }
   .wrapper main {
-    margin: 0 7%;
+    padding: 0 7%;
   }
   .wrapper footer .footer-content {
     right: 7%;
@@ -488,7 +491,7 @@ address {
     margin: 0 4%;
   }
   .wrapper main {
-    margin: 0 4%;
+    padding: 0 4%;
   }
   .wrapper footer .footer-content {
     right: 4%;

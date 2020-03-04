@@ -508,16 +508,19 @@ address {
         display: flex;
         flex: 1 0 auto;
         justify-content: space-between;
-        margin: 0 $page-margin;
-        background: $light-color;
+        padding: 0 $page-margin;
+        background-color: $desert-storm;
 
         .main-content {
+            width: 100%;
             padding: 30px 25px;
+            background: $light-color;
         }
 
         .sidebar {
             padding-bottom: 25px;
             border-left: $secondary-light-border;
+            background: $light-color;
         }
     }
 
@@ -568,7 +571,7 @@ address {
         }
 
         main {
-            margin: 0 $page-margin;
+            padding: 0 $page-margin;
         }
 
         footer {
@@ -593,7 +596,7 @@ address {
         }
 
         main {
-            margin: 0 $page-margin;
+            padding: 0 $page-margin;
         }
 
         footer {
