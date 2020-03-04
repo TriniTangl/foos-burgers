@@ -385,6 +385,7 @@ address {
   display: flex;
 }
 .header-nav a {
+  font-weight: bold;
   padding: 10px 20px;
   text-decoration: none;
   text-transform: uppercase;
