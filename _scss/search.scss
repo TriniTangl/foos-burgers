@@ -1,1 +1,37 @@
+@use "sass:color";
+@import "config";
 
+.wrapper {
+
+    header {
+        background-color: $double-colonial-white;
+
+        .header-nav a {
+            color: $dune;
+
+            &:hover {
+                background-color: color.scale($color: $double-colonial-white, $lightness: -30%);
+            }
+        }
+    }
+
+    main {
+    }
+
+    footer {
+        background-color: $primary-color;
+
+        address,
+        address a {
+            font-size: 14px;
+            color: $vista-white;
+        }
+
+        .footer-nav a {
+            font-size: 14px;
+            color: $vista-white;
+            border-right-color: $vista-white;
+        }
+    }
+
+}

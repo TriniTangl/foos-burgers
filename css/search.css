@@ -1,3 +1,24 @@
-
+.wrapper header {
+  background-color: #ede0aa;
+}
+.wrapper header .header-nav a {
+  color: #362f2d;
+}
+.wrapper header .header-nav a:hover {
+  background-color: #d8bb45;
+}
+.wrapper footer {
+  background-color: #ca500d;
+}
+.wrapper footer address,
+.wrapper footer address a {
+  font-size: 14px;
+  color: #f7edeb;
+}
+.wrapper footer .footer-nav a {
+  font-size: 14px;
+  color: #f7edeb;
+  border-right-color: #f7edeb;
+}
 
 /*# sourceMappingURL=search.css.map */
