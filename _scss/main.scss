@@ -1,4 +1,3 @@
-@use "sass:color";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap&subset=latin-ext');
 @import "config";
 
@@ -37,7 +36,7 @@ button {
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    color: $primary-light-color;
+    color: $vista-white;
     border: none;
     background-color: $primary-color;
 
@@ -49,10 +48,10 @@ button {
         padding: 10px 25px;
         color: $primary-color;
         border: $primary-border-x2;
-        background-color: $primary-light-color;
+        background-color: $vista-white;
 
         &:hover {
-            color: $primary-light-color;
+            color: $vista-white;
             background-color: $primary-color;
         }
     }
@@ -70,7 +69,7 @@ input:not([type="checkbox"]):not([type="radio"]) {
     font-size: 14px;
     margin: 5px 0;
     padding: 6px 8px;
-    border: 1px solid color.scale($secondary-dark-color, $lightness: 70%);
+    border: 1px solid $dusty-gray;
 }
 
 table {
@@ -107,10 +106,10 @@ address {
             text-decoration: none;
             text-transform: capitalize;
             color: $secondary-color;
-            background-color: $secondary-light-color;
+            background-color: $mercury;
 
             &:hover {
-                background-color: $light-dark-color;
+                background-color: $desert-storm;
             }
 
             &.active {
@@ -150,10 +149,10 @@ address {
             text-decoration: none;
             text-transform: uppercase;
             color: $secondary-color;
-            background-color: $secondary-light-color;
+            background-color: $mercury;
 
             &:hover {
-                background-color: $light-dark-color;
+                background-color: $desert-storm;
             }
 
             &.active {
@@ -279,7 +278,7 @@ address {
     width: 100%;
     padding: 10px 15px;
     text-transform: capitalize;
-    background-color: $secondary-light-color;
+    background-color: $desert-storm;
 
     .form-card-title {
         padding-bottom: 5px;
@@ -311,12 +310,12 @@ address {
                 height: 50px;
                 padding: 0 10px 0 35px;
                 cursor: pointer;
-                color: color.scale($secondary-dark-color, $lightness: -50%);
-                background-color: color.scale($secondary-light-color, $lightness: -10%);
+                color: $mine-shaft;
+                background-color: $quill-gray;
             }
 
             input:checked ~ label {
-                color: $primary-light-color;
+                color: $vista-white;
                 background-color: $primary-color;
             }
         }
@@ -358,7 +357,7 @@ address {
             background-color: $light-color;
 
             &:hover {
-                background-color: $primary-light-color;
+                background-color: $vista-white;
             }
         }
     }
@@ -384,7 +383,7 @@ address {
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-color: rgba(color.scale($primary-dark-color, $lightness: -90%), 75%);
+    background-color: rgba($dune, 85%);
 
     &.active {
         display: flex;
@@ -487,7 +486,7 @@ address {
     flex-direction: column;
     width: 100%;
     min-height: 100%;
-    background-color: $light-dark-color;
+    background-color: $desert-storm;
 
     header {
         flex: 0 0 auto;
