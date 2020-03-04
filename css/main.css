@@ -181,7 +181,6 @@ address {
   width: 50%;
   height: 100%;
   margin: 5px;
-  text-align: center;
 }
 .card .card-photo img {
   position: absolute;
