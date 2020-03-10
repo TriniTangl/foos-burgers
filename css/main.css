@@ -584,12 +584,12 @@ input:not([type=checkbox]):not([type=radio]) {
 .overlay .small-modal .modal-body .form-group input {
   margin: 0 10px;
 }
-.overlay .small-modal .modal-body .form-group .two-group {
+.overlay .small-modal .modal-body .form-group .two-column-fgroup {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.overlay .small-modal .modal-body .form-group .two-group input[type=number] {
+.overlay .small-modal .modal-body .form-group .two-column-fgroup input[type=number] {
   width: 50px;
   padding: 3px 4px;
   border-width: 2px;
