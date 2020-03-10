@@ -79,7 +79,7 @@ $btn-animation-duration: 1s;
         background-color: $double-colonial-white;
 
         .header-nav a {
-            color: $dune;
+            color: $secondary-dark-color;
 
             &:hover {
                 background-color: color.scale($color: $double-colonial-white, $lightness: -30%);
