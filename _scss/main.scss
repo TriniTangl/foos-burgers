@@ -1,3 +1,4 @@
+@use "sass:color";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap&subset=latin-ext');
 @import "config";
 
@@ -20,7 +21,6 @@ a {
     font-size: inherit;
     cursor: pointer;
     text-align: center;
-
     text-decoration: none;
     color: $primary-dark-color;
 
@@ -44,6 +44,33 @@ button {
     &:hover {
         background-color: $primary-dark-color;
     }
+
+    &.btn-bordered {
+        padding: 10px 25px;
+        color: $primary-color;
+        border: $primary-border-x2;
+        background-color: $primary-light-color;
+
+        &:hover {
+            color: $primary-light-color;
+            background-color: $primary-color;
+        }
+    }
+}
+
+textarea {
+    width: 100%;
+    height: 90px;
+    min-height: 50px;
+    resize: vertical;
+}
+
+textarea,
+input:not([type="checkbox"]):not([type="radio"]) {
+    font-size: 14px;
+    margin: 5px 0;
+    padding: 6px 8px;
+    border: 1px solid color.scale($secondary-dark-color, $lightness: 70%);
 }
 
 .tab-group {
@@ -56,7 +83,10 @@ button {
             font-size: 16px;
             font-weight: bold;
             line-height: 1;
+            display: flex;
+            align-items: center;
             flex-grow: 1;
+            justify-content: center;
             padding: 12px 5px;
             text-decoration: none;
             text-transform: capitalize;
@@ -80,7 +110,6 @@ button {
         &.active {
             display: block;
         }
-
     }
 }
 
@@ -118,7 +147,7 @@ button {
         }
     }
 
-    .category-card {
+    .category-content {
         display: none;
         width: 100%;
         margin-left: 10px;
@@ -127,20 +156,20 @@ button {
             display: block;
         }
 
-        .category-card-header {
+        .category-header {
             font-size: 30px;
             font-weight: bold;
             line-height: 1;
             width: 100%;
             height: 140px;
-            padding: 95px 15px 15px 15px;
+            padding: 95px 15px 15px;
             text-align: left;
             text-transform: uppercase;
             color: $light-color;
             background: $category-header-bg 0 25% / 130% auto no-repeat;
         }
 
-        .category-card-body {
+        .category-body {
             display: flex;
             flex-direction: column;
             min-width: 100%;
@@ -152,13 +181,14 @@ button {
     display: flex;
     justify-content: space-between;
     height: 200px;
-    padding: 20px 15px;
+    padding: 15px 10px;
 
-    .photo {
+    .card-photo {
         position: relative;
         overflow: hidden;
         width: 50%;
         height: 100%;
+        margin: 5px;
         text-align: center;
 
         img {
@@ -170,10 +200,10 @@ button {
         }
     }
 
-    .description {
+    .card-container {
         font-size: inherit;
         width: 50%;
-        padding: 0 15px;
+        margin: 5px;
 
         .card-header {
             font-weight: bold;
@@ -189,14 +219,27 @@ button {
             color: $primary-color;
         }
     }
-
-
 }
 
 .form-group {
 
+    &.rtl {
+        display: flex;
+        justify-content: flex-end;
+
+        label {
+            display: flex;
+            align-items: center;
+            padding: 0 5px 0;
+        }
+    }
+
     .title {
         font-weight: bold;
+    }
+
+    small {
+        padding: 3px 8px;
     }
 
     label {
@@ -204,6 +247,104 @@ button {
         width: max-content;
         padding-top: 5px;
         cursor: pointer;
+        text-transform: capitalize;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        width: 18px;
+        height: 18px;
+        vertical-align: text-bottom;
+    }
+}
+
+.form-card {
+    font-size: 18px;
+    width: 100%;
+    padding: 10px 15px;
+    text-transform: capitalize;
+    background-color: $secondary-light-color;
+
+    .form-card-title {
+        padding-bottom: 5px;
+    }
+
+    .form-card-board {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .tile {
+            position: relative;
+
+            input[type="checkbox"],
+            input[type="radio"] {
+                line-height: inherit;
+                position: absolute;
+                top: calc(50% - (20px / 2));
+                left: 10px;
+                width: 20px;
+                height: 20px;
+            }
+
+            label {
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 50px;
+                padding: 0 10px 0 35px;
+                cursor: pointer;
+                color: color.scale($secondary-dark-color, $lightness: -50%);
+                background-color: color.scale($secondary-light-color, $lightness: -10%);
+            }
+
+            input:checked ~ label {
+                color: $primary-light-color;
+                background-color: $primary-color;
+            }
+        }
+    }
+}
+
+.two-column-list {
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+
+        &.bordered {
+            border-bottom: $primary-dark-border;
+        }
+    }
+}
+
+.mini-card {
+
+    .title {
+        text-transform: capitalize;
+    }
+
+    .edit-buttons {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 3px;
+
+        button {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1;
+            margin-right: 2px;
+            padding: 2px 3px;
+            text-transform: lowercase;
+            color: $primary-dark-color;
+            border: $secondary-light-border;
+            background-color: $light-color;
+
+            &:hover {
+                background-color: $primary-light-color;
+            }
+        }
     }
 }
 
@@ -214,6 +355,83 @@ button {
 
     a {
         display: inline-block;
+    }
+}
+
+.overlay {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: none;
+    overflow: auto;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(color.scale($primary-dark-color, $lightness: -90%), 75%);
+
+    &.active {
+        display: flex;
+    }
+
+    .modal {
+        $modal-padding: 25px;
+
+        position: relative;
+        width: 40%;
+        height: max-content;
+        margin: 10px 0;
+        background-color: $light-color;
+
+        .close {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            background-color: transparent;
+
+            &:before,
+            &:after {
+                position: absolute;
+                top: 0;
+                left: 19px;
+                width: 3px;
+                height: 40px;
+                content: '';
+                background-color: $light-color;
+            }
+
+            &:before {
+                transform: rotate(45deg);
+            }
+
+            &:after {
+                transform: rotate(-45deg);
+            }
+
+            &:hover:before,
+            &:hover:after {
+                background-color: $primary-color;
+            }
+        }
+
+        .modal-header {
+            font-weight: normal;
+            padding: 10px $modal-padding;
+            text-transform: capitalize;
+            color: $light-color;
+            background-color: $secondary-dark-color;
+        }
+
+        .modal-body {
+            padding: 20px $modal-padding;
+        }
+
+        .modal-footer {
+            padding: 15px $modal-padding $modal-padding;
+        }
     }
 }
 
@@ -298,18 +516,30 @@ button {
 
                 .card {
 
-                    .card-body {
-                        font-size: 12px;
-                        line-height: 1.4;
-                    }
-
-                    .card-footer {
-                        display: flex;
-                        justify-content: space-between;
+                    .card-photo {
 
                         @media screen and (max-width: 1024px) {
-                            flex-direction: column-reverse;
-                            justify-content: unset;
+                            width: 40%;
+                            height: 75%;
+                        }
+                    }
+
+                    .card-container {
+                        width: 60%;
+
+                        .card-body {
+                            font-size: 12px;
+                            line-height: 1.4;
+                        }
+
+                        .card-footer {
+                            display: flex;
+                            justify-content: space-between;
+
+                            @media screen and (max-width: 1024px) {
+                                flex-direction: column-reverse;
+                                justify-content: unset;
+                            }
                         }
                     }
                 }
@@ -332,67 +562,22 @@ button {
                     text-transform: capitalize;
                 }
 
-                table {
-                    width: 100%;
+                .two-column-list {
                     margin: 15px 0 30px;
-                    table-layout: fixed;
-                    border-collapse: collapse;
                     border-top: $primary-dark-border;
 
-                    tr {
-                        &:not(.bordered-row) > .left-item {
+                    .row {
+
+                        & > *:not(.mini-card) {
                             font-weight: bold;
                             text-transform: uppercase;
                             color: $primary-dark-color;
                         }
 
-                        &.bordered-row > td {
-                            border-bottom: $primary-dark-border;
-                        }
-
-                        td {
+                        & > * {
                             padding: 8px 0;
-
-                            &.left-item {
-                                width: 70%;
-
-                                .title {
-                                    text-transform: capitalize;
-                                }
-                            }
-
-                            &.right-item {
-                                font-weight: bold;
-                                width: 30%;
-                                text-align: right;
-                                vertical-align: top;
-                                color: $primary-dark-color;
-                            }
                         }
                     }
-
-                    .edit-buttons {
-                        display: flex;
-                        justify-content: start;
-                        margin-top: 3px;
-
-                        button {
-                            font-size: 14px;
-                            font-weight: bold;
-                            line-height: 1;
-                            margin-right: 2px;
-                            padding: 2px 3px;
-                            text-transform: lowercase;
-                            color: $primary-dark-color;
-                            border: $secondary-light-border;
-                            background-color: $light-color;
-
-                            &:hover {
-                                background-color: $primary-light-color;
-                            }
-                        }
-                    }
-
                 }
 
                 form {
@@ -447,5 +632,127 @@ button {
                 }
             }
         }
+    }
+}
+
+.overlay {
+
+    .big-modal {
+        min-width: 750px;
+
+        .modal-body {
+
+            .card {
+                height: auto;
+                padding: 0;
+
+                .card-container {
+                    font-size: 18px;
+                    padding: 0;
+
+                    .card-header {
+                        font-size: 22px;
+                    }
+
+                    .card-body {
+                        padding: 15px 0;
+                    }
+
+                    .card-footer {
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .form-card {
+                margin: 15px 0;
+            }
+
+            .form-group.rtl {
+
+                label {
+                    font-size: 14px;
+                }
+
+                input {
+                    width: 50px;
+                }
+            }
+        }
+
+        .modal-footer {
+            display: flex;
+            justify-content: flex-end;
+
+            button {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .small-modal {
+        width: 30%;
+        min-width: 550px;
+
+        .modal-body {
+
+            .card {
+                justify-content: center;
+                padding-top: 0;
+                padding-bottom: 0;
+
+
+                .card-photo {
+                    width: 60%;
+                }
+            }
+
+            .form-group {
+                margin: 20px 0;
+
+                .title {
+                    font-size: 18px;
+                }
+
+                label {
+                    font-size: 14px;
+                    margin: 15px 0;
+                }
+
+                input {
+                    margin: 0 10px;
+                }
+
+                .two-column-fgroup {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    input[type="number"] {
+                        width: 50px;
+                        padding: 3px 4px;
+                        border-width: 2px;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+
+        .modal-footer {
+            display: flex;
+            justify-content: flex-end;
+
+            button {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+.card.custom {
+    height: auto;
+
+    button {
+        width: 48%;
     }
 }
