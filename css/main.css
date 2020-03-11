@@ -283,7 +283,7 @@ address {
   justify-content: space-between;
 }
 .two-column-list .row.bordered {
-  border-bottom: 1px solid #b84026;
+  border-bottom: 1px solid #ca500d;
 }
 
 .mini-card .title {
@@ -401,7 +401,7 @@ address {
 .footer-nav a {
   padding: 0 5px;
   text-transform: capitalize;
-  border-right: 1px solid #b84026;
+  border-right: 1px solid #ca500d;
 }
 .footer-nav a:last-child {
   border-right: none;

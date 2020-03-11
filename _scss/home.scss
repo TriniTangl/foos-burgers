@@ -14,8 +14,8 @@
             font-size: 14px;
             margin-top: 15px;
             padding: 10px 0;
-            border-top: $primary-dark-border;
-            border-bottom: $primary-dark-border;
+            border-top: $primary-border;
+            border-bottom: $primary-border;
         }
 
         .category-group {
@@ -53,7 +53,7 @@
     .sidebar {
         width: 30%;
         padding-bottom: 25px;
-        border-left: $secondary-light-border;
+        border-left: $light-border;
 
         h2 {
             text-transform: capitalize;
@@ -71,7 +71,7 @@
 
         .two-column-list {
             margin: 15px 0 30px;
-            border-top: $primary-dark-border;
+            border-top: $primary-border;
 
             .row {
 

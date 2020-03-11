@@ -47,7 +47,7 @@ button {
     &.btn-bordered {
         padding: 10px 25px;
         color: $primary-color;
-        border: $primary-border-x2;
+        border: $primary-border-2x;
         background-color: $vista-white;
 
         &:hover {
@@ -328,7 +328,7 @@ address {
         justify-content: space-between;
 
         &.bordered {
-            border-bottom: $primary-dark-border;
+            border-bottom: $primary-border;
         }
     }
 }
@@ -352,7 +352,7 @@ address {
             padding: 2px 3px;
             text-transform: lowercase;
             color: $primary-dark-color;
-            border: $secondary-light-border;
+            border: $light-border;
             background-color: $light-color;
 
             &:hover {
@@ -471,7 +471,7 @@ address {
     a {
         padding: 0 5px;
         text-transform: capitalize;
-        border-right: $primary-dark-border;
+        border-right: $primary-border;
 
         &:last-child {
             border-right: none;
@@ -519,7 +519,7 @@ address {
 
         .sidebar {
             padding-bottom: 25px;
-            border-left: $secondary-light-border;
+            border-left: $light-border;
             background: $light-color;
         }
     }
