@@ -30,3 +30,29 @@ $light-color: $white;
 $light-border: 1px solid $mercury;
 $primary-border: 1px solid $primary-color;
 $primary-border-2x: 2px solid $primary-color;
+
+
+// Global maixins
+@mixin page-margins($margin) {
+    .wrapper {
+
+        header {
+
+            .header-content {
+                margin: 0 $margin;
+            }
+        }
+
+        main {
+            padding: 0 $margin;
+        }
+
+        footer {
+
+            .footer-content {
+                right: $margin;
+                left: $margin;
+            }
+        }
+    }
+}
