@@ -479,6 +479,27 @@ address {
     }
 }
 
+@mixin page-margins($margin) {
+    .wrapper {
+        header {
+            .header-content {
+                margin: 0 $margin;
+            }
+        }
+
+        main {
+            padding: 0 $margin;
+        }
+
+        footer {
+            .footer-content {
+                right: $margin;
+                left: $margin;
+            }
+        }
+    }
+}
+
 @include page-margins(10%);
 
 @media screen and (max-width: 1024px) {
