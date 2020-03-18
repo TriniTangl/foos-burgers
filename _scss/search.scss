@@ -22,6 +22,7 @@ $btn-animation-duration: 1s;
 
         input {
             font-size: 18px;
+            line-height: 1;
             box-sizing: border-box;
             width: 100%;
             margin: 1px 0;
@@ -37,19 +38,20 @@ $btn-animation-duration: 1s;
             top: 0;
             right: 0;
             box-sizing: border-box;
-            width: 75px;
-            height: 44px;
-            margin: 1px 0;
+            width: 100%;
+            height: 50px;
+            margin: 0;
+            transition: width, height, margin-top, margin-right, margin-bottom, margin-left;
+            transition-timing-function: ease-in;
+            transition-duration: $btn-animation-duration;
             text-transform: capitalize;
             border-radius: 40px;
             outline: none;
 
-            &.resize {
-                animation-name: resizeButton;
-                animation-duration: $btn-animation-duration;
-                animation-timing-function: ease-in;
-                animation-direction: normal;
-                animation-fill-mode: forwards;
+            &.new-size {
+                width: 75px;
+                height: 48px;
+                margin: 1px 0;
             }
         }
     }
@@ -63,12 +65,6 @@ $btn-animation-duration: 1s;
     height: 100vh;
 
     circle {
-        animation-name: showOverlay;
-        animation-duration: 1s;
-        animation-timing-function: ease-in;
-        animation-delay: $btn-animation-duration;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
         fill: $primary-color;
     }
 }
@@ -152,27 +148,5 @@ $btn-animation-duration: 1s;
 
     footer {
         background-color: $baltic-sea;
-    }
-}
-
-@keyframes resizeButton {
-    from {
-        width: 75px;
-        height: 44px;
-        margin: 1px 0;
-    }
-    to {
-        width: 100%;
-        height: 46px;
-        margin: 0;
-    }
-}
-
-@keyframes showOverlay {
-    from {
-        r: 0;
-    }
-    to {
-        r: 100vw;
     }
 }
