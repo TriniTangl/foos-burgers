@@ -55,12 +55,6 @@
   height: 100vh;
 }
 .svg-overlay circle {
-  animation-name: showOverlay;
-  animation-duration: 1s;
-  animation-timing-function: ease-in;
-  animation-delay: 1s;
-  animation-direction: normal;
-  animation-fill-mode: forwards;
   fill: #ca500d;
 }
 
@@ -125,15 +119,6 @@
 }
 .wrapper.new footer {
   background-color: #2e2d32;
-}
-
-@keyframes showOverlay {
-  from {
-    r: 0;
-  }
-  to {
-    r: 100vw;
-  }
 }
 
 /*# sourceMappingURL=search.css.map */

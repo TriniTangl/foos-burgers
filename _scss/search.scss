@@ -65,12 +65,6 @@ $btn-animation-duration: 1s;
     height: 100vh;
 
     circle {
-        animation-name: showOverlay;
-        animation-duration: 1s;
-        animation-timing-function: ease-in;
-        animation-delay: $btn-animation-duration;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
         fill: $primary-color;
     }
 }
@@ -156,14 +150,5 @@ $btn-animation-duration: 1s;
 
     footer {
         background-color: $baltic-sea;
-    }
-}
-
-@keyframes showOverlay {
-    from {
-        r: 0;
-    }
-    to {
-        r: 100vw;
     }
 }

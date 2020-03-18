@@ -20,13 +20,22 @@ function showOverlay(cx, cy) {
     let namespaceURI = 'http://www.w3.org/2000/svg';
     let svgContainer = document.createElementNS(namespaceURI, 'svg');
     let circleElement = document.createElementNS(namespaceURI, 'circle');
+    let animation = document.createElementNS(namespaceURI, 'animate');
 
     svgContainer.classList.add('svg-overlay');
     circleElement.setAttributeNS(null, 'cx', cx);
     circleElement.setAttributeNS(null, 'cy', cy);
     circleElement.setAttributeNS(null, 'r', '0');
-    document.body.appendChild(svgContainer);
+    animation.setAttributeNS(null, 'attributeName', 'r');
+    animation.setAttributeNS(null, 'values', '0; 100vw; 0');
+    animation.setAttributeNS(null, 'keyTimes', '0; 0.5; 1');
+    animation.setAttributeNS(null, 'begin', '1s');
+    animation.setAttributeNS(null, 'dur', '2s');
+    animation.setAttributeNS(null, 'fill', 'remove');
+
+    circleElement.appendChild(animation);
     svgContainer.appendChild(circleElement);
+    document.body.appendChild(svgContainer);
 }
 
 function changeContent() {
@@ -40,8 +49,9 @@ function changeContent() {
         wrapper.classList.add('new');
     }
 
-    document.body.removeChild(document.querySelector('.svg-overlay'));
     formButton.classList.remove('new-size');
     formButton.textContent = 'Search...';
     formInput.value = '';
+
+    setTimeout(() => document.body.removeChild(document.querySelector('.svg-overlay')), 1100);
 }
