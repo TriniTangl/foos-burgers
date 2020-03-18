@@ -1,0 +1,178 @@
+@use "sass:color";
+@import "config";
+
+$btn-animation-duration: 1s;
+
+.animated-form {
+    width: 350px;
+
+    label {
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        color: $secondary-dark-color;
+    }
+
+    .group {
+        position: relative;
+        width: 100%;
+        margin: 5px 0;
+
+        input {
+            font-size: 18px;
+            box-sizing: border-box;
+            width: 100%;
+            margin: 1px 0;
+            padding: 10px 80px 10px 20px;
+            color: $dune;
+            border: $primary-border-2x;
+            border-radius: 40px;
+            outline: none;
+        }
+
+        button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            box-sizing: border-box;
+            width: 75px;
+            height: 44px;
+            margin: 1px 0;
+            text-transform: capitalize;
+            border-radius: 40px;
+            outline: none;
+
+            &.resize {
+                animation-name: resizeButton;
+                animation-duration: $btn-animation-duration;
+                animation-timing-function: ease-in;
+                animation-direction: normal;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+}
+
+.svg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    circle {
+        animation-name: showOverlay;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+        animation-delay: $btn-animation-duration;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+        fill: $primary-color;
+    }
+}
+
+.wrapper {
+    header {
+        background-color: $double-colonial-white;
+
+        .header-nav a {
+            color: $secondary-dark-color;
+
+            &:hover {
+                background-color: color.scale($color: $double-colonial-white, $lightness: -30%);
+            }
+        }
+    }
+
+    main {
+        background: url("../img/foods/chicken_burger_2.jpg") center/cover no-repeat;
+
+        .main-content {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+            background-color: transparent;
+
+            h1 {
+                font-size: 62px;
+                color: $double-colonial-white;
+            }
+        }
+    }
+
+    footer {
+        background-color: $primary-color;
+
+        address,
+        address a {
+            font-size: 14px;
+            color: $vista-white;
+        }
+
+        .footer-nav a {
+            font-size: 14px;
+            color: $vista-white;
+            border-right-color: $vista-white;
+        }
+    }
+}
+
+.wrapper.new {
+    header {
+        background: $primary-color;
+
+        .header-nav a {
+            color: $light-color;
+
+            &:hover {
+                background-color: $primary-dark-color;
+            }
+        }
+    }
+
+    main {
+        background: $silver;
+
+        .main-content {
+            padding-left: 50px;
+            background: url("../img/foods/burger_menu_3.jpg") center/cover no-repeat;
+
+            h1 {
+                color: $white;
+            }
+
+            label {
+                color: $white;
+            }
+        }
+    }
+
+    footer {
+        background-color: $baltic-sea;
+    }
+}
+
+@keyframes resizeButton {
+    from {
+        width: 75px;
+        height: 44px;
+        margin: 1px 0;
+    }
+    to {
+        width: 100%;
+        height: 46px;
+        margin: 0;
+    }
+}
+
+@keyframes showOverlay {
+    from {
+        r: 0;
+    }
+    to {
+        r: 100vw;
+    }
+}

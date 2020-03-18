@@ -1,18 +1,32 @@
 // Image variable
 $category-header-bg: url('../img/foods/foos_chicken.jpg');
 
+// Colors palette
+$double-colonial-white: #ede0aa;
+$tia-maria: #ca500d;
+$tall-poppy: #b84026;
+$white: #ffffff;
+$desert-storm: #f2f1f0;
+$mercury: #e5e4e3;
+$vista-white: #f7edeb;
+$quill-gray: #d7d6d4;
+$silver: #c5c5c5;
+$dusty-gray: #959595;
+$ship-gray: #424243;
+$mine-shaft: #363636;
+$dune: #362f2d;
+$baltic-sea: #2e2d32;
+
+
 // Colors variables
-$primary-color: #ca500d;
-$primary-dark-color: #b84026;
-$primary-light-color: #f7edeb;
-$secondary-color: #424243;
-$secondary-dark-color: #2e2d32;
-$secondary-light-color: #e5e4e3;
-$light-color: #ffffff;
-$light-dark-color: #f2f1f0;
+$primary-color: $tia-maria;
+$primary-dark-color: $tall-poppy;
+$secondary-color: $ship-gray;
+$secondary-dark-color: $baltic-sea;
+$light-color: $white;
 
 
 // Borders variables
-$primary-dark-border: 1px solid $primary-dark-color;
-$secondary-light-border: 1px solid $secondary-light-color;
-$primary-border-x2: 2px solid $primary-color;
+$light-border: 1px solid $mercury;
+$primary-border: 1px solid $primary-color;
+$primary-border-2x: 2px solid $primary-color;
