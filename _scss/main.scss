@@ -236,7 +236,6 @@ address {
 }
 
 .form-group {
-
     &.rtl {
         display: flex;
         justify-content: flex-end;
@@ -322,7 +321,6 @@ address {
 }
 
 .two-column-list {
-
     .row {
         display: flex;
         justify-content: space-between;
@@ -334,7 +332,6 @@ address {
 }
 
 .mini-card {
-
     .title {
         text-transform: capitalize;
     }
@@ -511,7 +508,6 @@ address {
 }
 
 .wrapper {
-
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -586,12 +582,10 @@ address {
 }
 
 .overlay {
-
     .big-modal {
         min-width: 750px;
 
         .modal-body {
-
             .card {
                 height: auto;
                 padding: 0;
@@ -619,7 +613,6 @@ address {
             }
 
             .form-group.rtl {
-
                 label {
                     font-size: 14px;
                 }
@@ -645,12 +638,10 @@ address {
         min-width: 550px;
 
         .modal-body {
-
             .card {
                 justify-content: center;
                 padding-top: 0;
                 padding-bottom: 0;
-
 
                 .card-photo {
                     width: 60%;

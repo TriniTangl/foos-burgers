@@ -1,7 +1,6 @@
 @import "config";
 
 .wrapper {
-
     .main-content {
         width: 70%;
 
@@ -74,7 +73,6 @@
             border-top: $primary-border;
 
             .row {
-
                 & > *:not(.mini-card) {
                     font-weight: bold;
                     text-transform: uppercase;
