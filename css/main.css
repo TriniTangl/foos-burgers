@@ -283,7 +283,7 @@ address {
   justify-content: space-between;
 }
 .two-column-list .row.bordered {
-  border-bottom: 1px solid #b84026;
+  border-bottom: 1px solid #ca500d;
 }
 
 .mini-card .title {
@@ -401,12 +401,47 @@ address {
 .footer-nav a {
   padding: 0 5px;
   text-transform: capitalize;
-  border-right: 1px solid #b84026;
+  border-right: 1px solid #ca500d;
 }
 .footer-nav a:last-child {
   border-right: none;
 }
 
+.wrapper header .header-content {
+  margin: 0 10%;
+}
+.wrapper main {
+  padding: 0 10%;
+}
+.wrapper footer .footer-content {
+  right: 10%;
+  left: 10%;
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper header .header-content {
+    margin: 0 7%;
+  }
+  .wrapper main {
+    padding: 0 7%;
+  }
+  .wrapper footer .footer-content {
+    right: 7%;
+    left: 7%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrapper header .header-content {
+    margin: 0 4%;
+  }
+  .wrapper main {
+    padding: 0 4%;
+  }
+  .wrapper footer .footer-content {
+    right: 4%;
+    left: 4%;
+  }
+}
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -425,14 +460,12 @@ address {
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  margin: 0 10%;
   padding: 0 25px;
 }
 .wrapper main {
   display: flex;
   flex: 1 0 auto;
   justify-content: space-between;
-  padding: 0 10%;
   background-color: #f2f1f0;
 }
 .wrapper main .main-content {
@@ -466,38 +499,12 @@ address {
 .wrapper footer .footer-content {
   font-size: 11px;
   position: absolute;
-  right: 10%;
-  left: 10%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 5px;
 }
 
-@media screen and (max-width: 1024px) {
-  .wrapper header .header-content {
-    margin: 0 7%;
-  }
-  .wrapper main {
-    padding: 0 7%;
-  }
-  .wrapper footer .footer-content {
-    right: 7%;
-    left: 7%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .wrapper header .header-content {
-    margin: 0 4%;
-  }
-  .wrapper main {
-    padding: 0 4%;
-  }
-  .wrapper footer .footer-content {
-    right: 4%;
-    left: 4%;
-  }
-}
 .overlay .big-modal {
   min-width: 750px;
 }

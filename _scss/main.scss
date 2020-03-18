@@ -47,7 +47,7 @@ button {
     &.btn-bordered {
         padding: 10px 25px;
         color: $primary-color;
-        border: $primary-border-x2;
+        border: $primary-border-2x;
         background-color: $vista-white;
 
         &:hover {
@@ -236,7 +236,6 @@ address {
 }
 
 .form-group {
-
     &.rtl {
         display: flex;
         justify-content: flex-end;
@@ -322,19 +321,17 @@ address {
 }
 
 .two-column-list {
-
     .row {
         display: flex;
         justify-content: space-between;
 
         &.bordered {
-            border-bottom: $primary-dark-border;
+            border-bottom: $primary-border;
         }
     }
 }
 
 .mini-card {
-
     .title {
         text-transform: capitalize;
     }
@@ -352,7 +349,7 @@ address {
             padding: 2px 3px;
             text-transform: lowercase;
             color: $primary-dark-color;
-            border: $secondary-light-border;
+            border: $light-border;
             background-color: $light-color;
 
             &:hover {
@@ -471,7 +468,7 @@ address {
     a {
         padding: 0 5px;
         text-transform: capitalize;
-        border-right: $primary-dark-border;
+        border-right: $primary-border;
 
         &:last-child {
             border-right: none;
@@ -479,9 +476,38 @@ address {
     }
 }
 
-.wrapper {
-    $page-margin: 10%;
+@mixin page-margins($margin) {
+    .wrapper {
+        header {
+            .header-content {
+                margin: 0 $margin;
+            }
+        }
 
+        main {
+            padding: 0 $margin;
+        }
+
+        footer {
+            .footer-content {
+                right: $margin;
+                left: $margin;
+            }
+        }
+    }
+}
+
+@include page-margins(10%);
+
+@media screen and (max-width: 1024px) {
+    @include page-margins(7%);
+}
+
+@media screen and (max-width: 768px) {
+    @include page-margins(4%);
+}
+
+.wrapper {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -499,7 +525,6 @@ address {
             align-items: center;
             justify-content: space-between;
             height: 100%;
-            margin: 0 $page-margin;
             padding: 0 25px;
         }
     }
@@ -508,7 +533,6 @@ address {
         display: flex;
         flex: 1 0 auto;
         justify-content: space-between;
-        padding: 0 $page-margin;
         background-color: $desert-storm;
 
         .main-content {
@@ -519,7 +543,7 @@ address {
 
         .sidebar {
             padding-bottom: 25px;
-            border-left: $secondary-light-border;
+            border-left: $light-border;
             background: $light-color;
         }
     }
@@ -549,8 +573,6 @@ address {
         .footer-content {
             font-size: 11px;
             position: absolute;
-            right: $page-margin;
-            left: $page-margin;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -559,63 +581,11 @@ address {
     }
 }
 
-@media screen and (max-width: 1024px) {
-    .wrapper {
-        $page-margin: 7%;
-
-        header {
-
-            .header-content {
-                margin: 0 $page-margin;
-            }
-        }
-
-        main {
-            padding: 0 $page-margin;
-        }
-
-        footer {
-
-            .footer-content {
-                right: $page-margin;
-                left: $page-margin;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .wrapper {
-        $page-margin: 4%;
-
-        header {
-
-            .header-content {
-                margin: 0 $page-margin;
-            }
-        }
-
-        main {
-            padding: 0 $page-margin;
-        }
-
-        footer {
-
-            .footer-content {
-                right: $page-margin;
-                left: $page-margin;
-            }
-        }
-    }
-}
-
 .overlay {
-
     .big-modal {
         min-width: 750px;
 
         .modal-body {
-
             .card {
                 height: auto;
                 padding: 0;
@@ -643,7 +613,6 @@ address {
             }
 
             .form-group.rtl {
-
                 label {
                     font-size: 14px;
                 }
@@ -669,12 +638,10 @@ address {
         min-width: 550px;
 
         .modal-body {
-
             .card {
                 justify-content: center;
                 padding-top: 0;
                 padding-bottom: 0;
-
 
                 .card-photo {
                     width: 60%;

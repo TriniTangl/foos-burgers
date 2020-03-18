@@ -9,8 +9,8 @@
   font-size: 14px;
   margin-top: 15px;
   padding: 10px 0;
-  border-top: 1px solid #b84026;
-  border-bottom: 1px solid #b84026;
+  border-top: 1px solid #ca500d;
+  border-bottom: 1px solid #ca500d;
 }
 .wrapper .main-content .category-group {
   margin-top: 20px;
@@ -54,7 +54,7 @@
 }
 .wrapper .sidebar .two-column-list {
   margin: 15px 0 30px;
-  border-top: 1px solid #b84026;
+  border-top: 1px solid #ca500d;
 }
 .wrapper .sidebar .two-column-list .row > *:not(.mini-card) {
   font-weight: bold;
