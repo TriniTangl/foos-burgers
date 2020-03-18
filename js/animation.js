@@ -4,13 +4,15 @@ window.onload = () => {
 };
 
 function animateButton(event) {
-    if (!event.target.classList.contains('resize')) {
-        event.target.classList.add('resize');
+    if (!event.target.classList.contains('new-size')) {
+        event.target.classList.add('new-size');
+        event.target.textContent = 'Go!';
+    } else {
+        event.target.classList.remove('new-size');
+
+        showOverlay(event.x, event.y);
+        setTimeout(changeContent, 2000);
     }
-
-    showOverlay(event.x, event.y);
-    setTimeout(changeContent, 2100);
-
     event.preventDefault();
 }
 
@@ -29,12 +31,17 @@ function showOverlay(cx, cy) {
 
 function changeContent() {
     let wrapper = document.querySelector('.wrapper');
+    let formButton = document.querySelector('.animated-form button');
+    let formInput = document.querySelector('.animated-form input');
+
     if (wrapper.classList.contains('new')) {
         wrapper.classList.remove('new');
     } else {
         wrapper.classList.add('new');
     }
 
-    document.querySelector('.animated-form button').classList.remove('resize');
     document.body.removeChild(document.querySelector('.svg-overlay'));
+    formButton.classList.remove('new-size');
+    formButton.textContent = 'Search...';
+    formInput.value = '';
 }
